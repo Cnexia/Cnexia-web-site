@@ -1,0 +1,99 @@
+        .home_prt6 {
+            margin-top: 2rem;
+            max-width: 75rem;
+            width: 100%; /* Add this to make it responsive */
+            height: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 2rem;
+            text-align: center;
+        }
+
+        .prt6_title {
+            color: #044123;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: relative;
+        }
+
+        .prt6_cards_container {
+            display: grid;
+            max-width: 75rem;
+            height: auto;
+            width: 100%; 
+           
+            grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+            grid-gap: 2.5rem;
+            overflow: hidden;
+        }
+
+        .prt6_card {
+            width: 22.59481rem; /* Change this to make it responsive */
+            
+            height: 27.3rem; /* Change to auto to maintain aspect ratio */
+            border-radius: 0.9375rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prt6_card_bcg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .prt6_card:hover .prt6_card_bcg {
+            transform: scale(1.1);
+        }
+
+        .prt6_card_bcg.N1 {
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/3raisons-for-joun-us-picN1-1696417927740.png");
+        }
+
+        .prt6_card_bcg.N2 {
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/dlsksldk-1697472408964.png");
+        }
+
+        .prt6_card_bcg.N3 {
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/Rectangle93-1696346788411.jpg");
+        }
+
+        .prt6_card_gradient {
+            width: 100%;
+            height: 100%;
+            background: rgb(3, 181, 133);
+            background: linear-gradient(0deg, rgba(3, 181, 133, 1) 20%, rgba(3, 181, 133, 0) 50%);
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        .prt6_card_content {
+            color: #fff;
+            text-align: center;
+            font-family: 'GTAmerica-Medium';
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.75rem;
+            padding: 1rem;
+            margin-top: 90%;
+            position: absolute;
+            z-index: 3;
+            top: 0;
+        }
+
+        /* Media Query for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .prt6_card {
+                max-width: 100%; /* Adjust for smaller screens */
+            }
+        }

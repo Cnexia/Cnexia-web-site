@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Responsive Cards</title>
+</head>
+<body>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    justify-content: flex-start; /* Start from the left */
+}
+
+.card {
+    display: flex;
+    width:calc(100%/3.1);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    margin: 0.5rem; /* Add margin for spacing between cards */
+}
+
+
+
+
+
+.nav-dots, .nav-buttons {
+    display: none;
+}
+
+/* Media queries for tablet and phone formats */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(100% - 1rem);
+    }
+
+    .nav-dots {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .nav-dots {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: block;
+    }
+}
+
+
+
+    </style>
+    <div class="card-container">
+        <div class="card">
+          <h2>Card 1</h2>
+        </div>
+        <div class="card">
+          <h2>Card 2</h2>
+        </div>
+        <div class="card">
+          <h2>Card 3</h2>
+        </div>
+      </div>
+      
+      <div class="nav-buttons">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+      </div>
+      
+    <script>
+const cards = document.querySelectorAll('.card');
+const dots = document.querySelectorAll('.dot');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+let currentIndex = 0;
+
+function updateCards() {
+    cards.forEach((card, index) => {
+        card.style.transform = `translateX(${100 * (index - currentIndex)}%)`;
+    });
+
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
+
+nextButton.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateCards();
+    }
+});
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCards();
+    }
+});
+
+updateCards();
+
+
+    </script>
+</body>
+</html>
