@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family='Montserrat', sans-serif:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,500;1,600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
 </head>
@@ -138,32 +141,30 @@
             
         }
 
-        .baner_content{
+        .baner_content {
             position: absolute;
             z-index: 4;
             display: grid;
             grid-template-rows: auto;
             top: 17%;
-            left: 12% ;
+            left: 12%;
             text-align: left;
             grid-gap: 1rem;
-            
-            
-
+            justify-content: start; /* Align items to the start */
         }
-        .banner_title{
+
+        .banner_title {
             color: #FFF;
             font-family: 'Montserrat', sans-serif;
             font-size: 8.5rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 98.4%; /* 8.4425rem */
+            line-height: 98.4%;
             max-width: 53rem;
             margin-right: 10%;
-            
         }
 
-        .banner_text{
+        .banner_text {
             color: #FFF;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.47025rem;
@@ -172,23 +173,28 @@
             line-height: normal;
             max-width: 58.81056rem;
         }
-        a.btn_info.N1 {
-            margin-right: 100%;
+        .banner_btn_container{
+            display: flex;
+            margin-left: 0;
         }
-        .banner_btn{
+        a.banner_btn {
+            text-align: left; /* Align the content to the left */
+            display: block; /* Make the link a block element */
+        }
+
+        .banner_btn {
             width: 10.62rem;
             height: 2.6rem;
             border-radius: 4.77838rem;
-            
             padding: 0.51456rem 0.95569rem 0.51456rem 1.02919rem;
             display: grid;
             grid-template-columns: auto auto;
             grid-gap: .5rem;
-            
-            margin-top: 3%;
             transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, stroke 0.3s ease;
-
         }
+
+
+
         .banner_btn.white{
             background: #FFF;
         }
@@ -652,6 +658,7 @@
 
 .prt6_card_bcg.N2 {
     background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/dlsksldk-1697472408964.png");
+    background-position: 80% 0%;
 }
 
 .prt6_card_bcg.N3 {
@@ -683,13 +690,17 @@
     z-index: 3;
     top: 0;
 }
-.navigation-dots {
-    text-align: center;
+.navigation-btns {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
     
-    display: none;
+    grid-gap: .5rem;
+    
+    
 }
 
-.dot {
+/* .dot {
     width: 10px;
     height: 10px;
     background-color: #ccc;
@@ -704,12 +715,55 @@
     scale: 1.3;
 }
 .prt6_card.active {
-    transform: translateX(0); /* Apply the translation to the active card */
+    transform: translateX(0); /* Apply the translation to the active card 
 }
 
+
 .prt6_card.inactive {
-    transform: translateX(100%); /* Move the inactive card off the screen */
+    transform: translateX(100%); /* Move the inactive card off the screen 
+} */
+
+.nav_left_btn {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem 0rem;
+    border: 0.5px solid #00966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
 }
+
+.nav_right_btn {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0rem 0.5rem;
+    border: 0.5px solid #00966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+/* Change background color on hover */
+.nav_left_btn:hover, .nav_right_btn:hover {
+    background-color: #00966C;
+    transform: scale(1.2); /* Slightly scale up on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Change arrow color on hover */
+ #nav_svg {
+    stroke: #747474;
+}
+.nav_left_btn:hover #nav_svg, .nav_right_btn:hover #nav_svg{
+    stroke: white;
+}
+
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
@@ -735,6 +789,7 @@
         display: block;
     }
 }
+
 /* ------------------------------> PART7 <------------------------------------ */
 
         .home_prt7{
@@ -809,10 +864,10 @@
         .test_text{
             color: #044123;
             
-            font-family: 'GTAmerica-MediumItalicpx';
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.45rem;
-            font-style: normal;
-            font-weight: 400;
+            font-style:italic;
+            font-weight: 500;
             line-height: normal;
             height: 15.5rem;
         }
@@ -863,7 +918,7 @@
           .banner_title{
             max-width: 40rem;
             font-size: 6rem;
-            margin-right: 50%;
+            
           }
           .banner_text{
             max-width: 45rem;
@@ -913,7 +968,7 @@
           .banner_title{
             max-width: 40rem;
             font-size: 5rem;
-            margin-right: 50%;
+            
           }
           .banner_text{
             max-width: auto;
@@ -970,7 +1025,7 @@
             .banner_title{
             max-width: auto;
             font-size: 4.3rem;
-            margin-right: 50%;
+            
           }
             .prt4_card.N3{
             height: 13.75rem;
@@ -1007,17 +1062,17 @@
             .baner_content{
                 top: 0%;
                 bottom: 0%;
-                margin-top: 20%;
-                margin-bottom: 20%;
+                margin-top: 10%;
+                margin-bottom: 10%;
             }
             .banner_title{
             max-width: auto;
             font-size: 3rem;
-            margin-right: 50%;
+            
             }
             .banner_text{
             max-width: auto;
-            margin-right: 3%;
+            
             font-size: 1.2rem;
             }
 
@@ -1078,6 +1133,7 @@
             grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
             grid-gap: 2rem;
         }
+        
         .card_icon{
             width: 10rem;
             height: 10rem;
@@ -1086,6 +1142,9 @@
         }
         .home_banner{
             border-radius: 1rem;
+        }
+        .banner_text{
+            margin-right: 5%;
         }
         .banner_bcg{
            border-radius: 1rem;
@@ -1119,12 +1178,13 @@
         
 
         @media (max-width: 450px){
-            .card_icon{
-            width: 8rem;
-            height: 8rem;
+
+            .home_prt3{
             
-           
+            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+            grid-gap: 2rem;
         }
+        
         .home_banner{
             border-radius: .3rem;
         }
@@ -1213,21 +1273,23 @@
             <div class="banner_text">
                 <p>Nous œuvrons à assurer un service client irréprochable, un cheminement de carrière stimulant et un avenir meilleur pour tous.</p>
             </div>
-            <a class="btn_info N1" href="https://www.cnexia.com/jointalentcommunity?applyType=JTC"><div class="banner_btn white">
-                <div class="banner_btn_text white"><p>Rejoignez-nous</p></div>
-                <div class="banner_btn_arrow">
-                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="btn_arrow white" d="M1.93169 15.8568L7.15663 9.76105C7.53418 9.32057 7.53418 8.67059 7.15663 8.23011L1.93169 2.13435" stroke="#03B585" stroke-width="2.35242" stroke-linecap="round"/>
-                        </svg>
-                        
-                </div>
-            </div></a>
+            <div class="banner_btn_container">
+                <a  class="btn_info N1" href="https://www.cnexia.com/jointalentcommunity?applyType=JTC"><div class="banner_btn white">
+                    <div  class="banner_btn_text white"><p>Rejoignez-nous</p></div>
+                    <div class="banner_btn_arrow">
+                        <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="btn_arrow white" d="M1.93169 15.8568L7.15663 9.76105C7.53418 9.32057 7.53418 8.67059 7.15663 8.23011L1.93169 2.13435" stroke="#03B585" stroke-width="2.35242" stroke-linecap="round"/>
+                            </svg>
+                            
+                    </div>
+                </div></a>
+            </div>
 
 
         </div>
     </div>
 
-    <script type="text/javascript" src="https://medameur-devlopper.github.io/Banner_script.js"></script>
+    <script type="text/javascript" src="https://cnexia.github.io/Cnexia-web-site/Banner_script.js"></script>
 
 <!-- ---------------------------------------- second part -------------------------------------------- --> 
 
@@ -1299,7 +1361,7 @@
     </div>
 
     
-    <script type="text/javascript" src="https://medameur-devlopper.github.io/third_part_script.js"></script>
+    <script type="text/javascript" src="https://cnexia.github.io/Cnexia-web-site/third_part_script.js"></script>
 
 
 
@@ -1322,7 +1384,7 @@
                         <p>Service client</p>
                     </div> 
                     <div class="metier_description">
-                        <p>Nos équipes opérationnelles, passionnées et polyvalentes, gèrent au quotidien plus de 40 activités diversifiées. d'activité diversifiés.
+                        <p>Nos équipes opérationnelles, passionnées et polyvalentes, gèrent au quotidien plus de 40 d'activité diversifiés.
                             Elles se consacrent à l'excellence du service client en alliant support technique, fidélisation, programmes de loyauté et ventes, offrant ainsi un large éventail d'opportunités de carrière.
                            </p>
                     </div>  
@@ -1437,49 +1499,59 @@
 
 <!-- ---------------------------------------- six part -------------------------------------------- -->
 
-    <div class="home_prt6">
-        <div class="prt6_title">
-            <p>3 raisons pour nous rejoindre</p>
-        </div>
-        <div class="prt6_cards_container">
-            <div class="prt6_card N1">
-                <div class="prt6_card_bcg N1"></div>
-                <div class="prt6_card_gradient"></div>
-                <div class="prt6_card_content">
-                    <p>
-                        Un environnement innovant avec une ambiance dynamique
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="prt6_card N2">
-                <div class="prt6_card_bcg N2"></div>
-                <div class="prt6_card_gradient"></div>
-                <div class="prt6_card_content">
-                    <p>
-                        Une équipe passionnée, jeune et ambitieuse
-                    </p>
-                </div>
-            </div>
-
-            <div class="prt6_card N3">
-                <div class="prt6_card_bcg N3"></div>
-                <div class="prt6_card_gradient"></div>
-                <div class="prt6_card_content">
-                    <p>
-                        De nombreuses opportunités et un parcours de carrière évolutif                    </p>
-                </div>
+<div class="home_prt6">
+    <div class="prt6_title">
+        <p>3 raisons pour nous rejoindre</p>
+    </div>
+    <div class="prt6_cards_container">
+        <div class="prt6_card N1" id="card1">
+            <div class="prt6_card_bcg N1"></div>
+            <div class="prt6_card_gradient"></div>
+            <div class="prt6_card_content">
+                <p>
+                    Un environnement innovant avec une ambiance dynamique
+                </p>
             </div>
         </div>
-        <div class="navigation-dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+
+
+        <div class="prt6_card N2" id="card2">
+            <div class="prt6_card_bcg N2"></div>
+            <div class="prt6_card_gradient"></div>
+            <div class="prt6_card_content">
+                <p>
+                    Une équipe passionnée, jeune et ambitieuse
+                </p>
+            </div>
+        </div>
+
+        <div class="prt6_card N3" id="card3">
+            <div class="prt6_card_bcg N3"></div>
+            <div class="prt6_card_gradient"></div>
+            <div class="prt6_card_content">
+                <p>
+                    De nombreuses opportunités et un parcours de carrière évolutif                    </p>
+            </div>
         </div>
     </div>
+    <div class="navigation-btns">
+        <div class="nav_left_btn">
+            <svg id="nav_svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.875 6.22H1M1 6.22L6.22 1M1 6.22L6.22 11.44"  stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+                
+        </div>
+        <div class="nav_right_btn">
+            <svg id="nav_svg" class="custom-svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6.22H11.875M11.875 6.22L6.655 1M11.875 6.22L6.655 11.44" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+                
+        </div>
+    </div>
+ </div>
 
-     <script type="text/javascript" src="./six_part.js"></script>
+     <script type="text/javascript" src="https://cnexia.github.io/Cnexia-web-site/six_part.js"></script>
 
 
 <!-- ---------------------------------------- 7th  part -------------------------------------------- -->
@@ -1523,7 +1595,7 @@
         </div>
      </div>
 
-     <script type="text/javascript" src="https://medameur-devlopper.github.io/Home_testemonials_script.js"></script>
+     <script type="text/javascript" src="https://cnexia.github.io/Cnexia-web-site/Home_testemonials_script.js"></script>
 
 
      

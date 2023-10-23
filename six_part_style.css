@@ -61,6 +61,7 @@
 
 .prt6_card_bcg.N2 {
     background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/dlsksldk-1697472408964.png");
+    background-position: 80% 0%;
 }
 
 .prt6_card_bcg.N3 {
@@ -87,18 +88,22 @@
     line-height: 1.75rem;
     text-align: center;
     padding: 1rem;
-    margin-top: 19rem;
+    margin-top: 20rem;
     position: absolute;
     z-index: 3;
     top: 0;
 }
-.navigation-dots {
-    text-align: center;
+.navigation-btns {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
     
-    display: none;
+    grid-gap: .5rem;
+    
+    
 }
 
-.dot {
+/* .dot {
     width: 10px;
     height: 10px;
     background-color: #ccc;
@@ -113,12 +118,55 @@
     scale: 1.3;
 }
 .prt6_card.active {
-    transform: translateX(0); /* Apply the translation to the active card */
+    transform: translateX(0); /* Apply the translation to the active card 
 }
 
+
 .prt6_card.inactive {
-    transform: translateX(100%); /* Move the inactive card off the screen */
+    transform: translateX(100%); /* Move the inactive card off the screen 
+} */
+
+.nav_left_btn {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem 0rem;
+    border: 0.5px solid #00966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
 }
+
+.nav_right_btn {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0rem 0.5rem;
+    border: 0.5px solid #00966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+/* Change background color on hover */
+.nav_left_btn:hover, .nav_right_btn:hover {
+    background-color: #00966C;
+    transform: scale(1.2); /* Slightly scale up on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Change arrow color on hover */
+ #nav_svg {
+    stroke: #747474;
+}
+.nav_left_btn:hover #nav_svg, .nav_right_btn:hover #nav_svg{
+    stroke: white;
+}
+
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
