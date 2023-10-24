@@ -1,0 +1,179 @@
+/* ------------------- Globale Iputes ---------------- */
+p{
+    margin: 0;
+
+}
+
+*{
+    padding: 0;
+    margin: auto;
+    max-width: 1920px;
+    
+}
+.inner-container.ph-fluid-container, .container.ph-fluid-container {
+
+    padding-top: 0;
+}
+
+        
+a:link {
+text-decoration: none;
+}
+
+a:visited {
+text-decoration: none;
+}
+.ph-page {
+    margin-top: 100px;
+}
+
+
+
+
+/* ------------------- How we are banner ---------------- */
+.hwa_banner{
+    max-width: 99rem;
+    max-height: 34rem;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+   
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-top: .7rem; 
+
+    perspective: 1000px;
+    transition: transform 0.5s ease;
+}
+.banner_bcg{
+
+    background: #0BAA7A;
+    position: relative;
+    width: 100%;
+    height: 34rem;
+    z-index: 1;
+}
+.banner_svg{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+.banner_gradient{
+    background: linear-gradient(110deg, rgba(3, 181, 145, 0.00) 0.75%, #03B585 24.11%, #04B68B 74.85%, rgba(4, 182, 134, 0.00) 102.63%);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 34rem;
+}
+.banner_content{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    width: 100%;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+}
+.hero{
+    margin: 0;
+    position: absolute;
+    left: 94%;
+    top: 6%;
+    
+}
+.text_right{
+    color: #FFF;
+    font-family: GT America;
+    font-size: 3.40rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    margin: 0;
+    left: 65%;
+    top: 55%;
+}
+.text_left{
+    color: #FFF;
+    font-family: GT America;
+    font-size: 3.83rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    position: absolute;
+    margin: 0;
+    left: 10%;
+    top: 25%;
+}
+.banner_img{
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/heroimage-1698105476156.png");
+    position: absolute;
+    z-index: 5;
+    width: 30rem;
+    
+    height: 34rem;
+    top: 0;
+    left: 35%;
+    background-size: cover; /* Scale the background image to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+
+}
+
+
+/* the paralex effect just added */
+
+.hwa_banner:hover {
+    transform: perspective(1000px) rotateX(3deg); /* Adjust the rotation values for the 3D effect */
+}
+
+.banner_bcg,
+.banner_svg,
+.banner_gradient,
+.banner_content,
+.text_right,
+.text_left,
+.banner_img {
+    transform-style: preserve-3d; /* Maintain 3D perspective on child elements */
+    transform: translateZ(1px); /* Add a minimal depth to child elements */
+}
+
+/* ------------------- en savoire pls sur cnexia ---------------- */
+
+.part2 {
+    margin-top: 3rem;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    grid-gap: 2rem;
+    text-align: left ; /* Align the title to the left */
+}
+
+.prt2_title {
+    color: #044123;
+    text-align: left ; /* Align the title to the left */
+    font-family: Montserrat;
+    font-size: 2.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+}
+
+.prt2_content {
+    color: #044123;
+    text-align: justify;
+    font-family: GT America;
+    font-size: 1.60563rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 100%;
+}
+
