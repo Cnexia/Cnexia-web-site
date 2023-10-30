@@ -514,3 +514,52 @@ a.banner_btn {
 .btn_arrow.green{
     stroke:#03B585;
 }
+
+/* ------------------- 7th part ---------------- */
+
+
+.part7{
+    max-width: 74.75rem;
+    height: 36.40938rem;
+    width: 100%;
+    
+    margin-top: 5rem;
+    overflow: hidden;
+    border-radius: 4rem;
+    position: relative;
+    display: block;
+}
+.prt7_layer1{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/fsdsdfsvxcvzsg-16502948787961-1698658708676.jpg");
+    background-size: cover; /* Scale the background image to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center;
+}
+
+.prt7_layer2{
+    background: linear-gradient(180deg, rgba(0, 150, 108, 0.00) 0%, rgba(0, 150, 108, 0.00) 67.19%, #03B585 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.prt7_layer3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+}
+.prt7_nav_btn_left{
+    margin: auto auto auto 1rem;
+}
+.prt7_nav_btn_right{
+    margin: auto 1rem auto auto ;
+}

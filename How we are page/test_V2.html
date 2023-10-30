@@ -275,6 +275,8 @@
         </div>
     </section>
 
+    <script type="text/javascript" src="./moving_svg_script.js"></script>
+
  <!-- ---------------------------------------- 6th part -------------------------------------------- --> 
 
         <section class="part6">
@@ -298,52 +300,37 @@
             </div>
         </section>
 
+
+ <!-- ---------------------------------------- 7th part "la bibliotheque des images" -------------------------------------------- --> 
+        <section class="part7">
+            <div class="prt7_layer1">
+
+            </div>
+            <div class="prt7_layer2">
+
+            </div>
+            <div class="prt7_layer3">
+                <div class="prt7_nav_btn_left">
+                    <svg width="25" height="46" viewBox="0 0 25 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.1541 2L2 23.1541L23.1541 44.3082" stroke="white" stroke-opacity="0.47" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </div>
+                <div class="prt7_nav_btn_right">
+                    <svg width="25" height="46" viewBox="0 0 25 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L23.1541 23.1541L2 44.3082" stroke="white" stroke-opacity="0.47" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                </div>
+            </div>
+        </section>
+
 <!-- </div> -->
 
 
 
 
 <script>
-      // Select the SVG
-  const svg = document.getElementById('moving-svg');
 
-// Select all elements with class starting with "prt5_content_holder"
-const contentHolders = document.querySelectorAll('[class^="prt5_content_holder"]');
-
-// Store the Y positions for each content holder
-const contentHolderPositions = {
-  N1: 50,
-  N2: 290, // Adjust the Y position as needed
-  N3: 480, // Adjust the Y position as needed
-  N4: 650, // Adjust the Y position as needed
-  N5: 850, // Adjust the Y position as needed
-};
-
-let isHovering = false; // Track if the mouse is hovering
-
-contentHolders.forEach((contentHolder, index) => {
-  const className = contentHolder.className;
-  const positionY = contentHolderPositions[className.split(' ')[1]];
-
-  contentHolder.addEventListener('mouseenter', () => {
-    // Move the SVG to the specific Y position
-    svg.style.transform = `translateY(${positionY}px)`;
-    isHovering = true;
-  });
-
-  contentHolder.addEventListener('mouseleave', () => {
-    if (!isHovering) {
-      // Reset the SVG position when the mouse leaves and no content holder is hovered
-      svg.style.transform = 'translateY(0)';
-    }
-  });
-});
-
-// Add an event listener to reset the SVG when the mouse leaves the entire container
-document.getElementById('container').addEventListener('mouseleave', () => {
-  isHovering = false;
-  svg.style.transform = 'translateY(0)';
-});
 </script>
 
       
