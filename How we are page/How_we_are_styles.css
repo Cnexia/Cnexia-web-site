@@ -557,9 +557,24 @@ a.banner_btn {
     z-index: 3;
     display: flex;
 }
-.prt7_nav_btn_left{
+.prt7_nav_btn_left {
     margin: auto auto auto 1rem;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
 }
-.prt7_nav_btn_right{
-    margin: auto 1rem auto auto ;
+
+.prt7_nav_btn_right {
+    margin: auto 1rem auto auto;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.prt7_nav_btn_left:hover #prt7_nav_left {
+    stroke-width: 5;
+    transform: scale(1.2);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.prt7_nav_btn_right:hover #prt7_nav_right {
+    stroke-width: 5;
+    transform: scale(1.2);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
 }
