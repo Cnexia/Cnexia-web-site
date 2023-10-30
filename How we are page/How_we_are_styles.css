@@ -286,16 +286,24 @@ text-decoration: none;
     
 }
 
+/* ------------------- the 3parts container ---------------- */
+/* .last3_parts_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+} */
 /* ------------------- Nos valeurs ---------------- */
-
 .part5{
-    margin-top: 3rem;
+    margin-top: 5rem;
     max-width: 66.8125rem;
     max-height: 92.125rem;
     width: 100%;
     height: 100%;
     display: grid;
     grid-gap: 5rem;
+    
+   
 }
 
 .prt5_title{
@@ -310,7 +318,8 @@ text-decoration: none;
 }
 .prt5_main{
     width: 100%;
-    height: 100%;
+    height: 900px;
+    display: flex;
     position: relative;
     
     grid-gap: 4rem;
@@ -318,13 +327,14 @@ text-decoration: none;
 }
 .prt5_layer1{
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: auto;
     grid-gap: 1rem;
+    margin-top: 5rem;
 }
 .prt5_content_holder{
     width: 100%;
@@ -387,17 +397,120 @@ text-decoration: none;
     width: 100%;
     height: 100%;
     display: flex;
+    margin-top: 4rem;
 }
 
 .prt5_layer3{
-    position: relative;
+    position: absolute;
     z-index: 3;
     
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
 }
 
 #moving-svg {
     transition: transform 0.5s ease; /* Adjust the transition duration as needed */
+}
+
+.prt5_layer4{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.prt5_icon.N1{
+    margin-top: 100px;
+}
+.prt5_icon.N2{
+    margin-top: 160px;
+}
+.prt5_icon.N3{
+    margin-top: 140px;
+}
+.prt5_icon.N4{
+    margin-top: 117px;
+}
+.prt5_icon.N5{
+    margin-top: 130px;
+}
+
+
+
+/* ------------------- 6th part ---------------- */
+
+.part6{
+    max-width: 66.8125rem;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    
+    margin-top: 18rem;
+    grid-gap: 1rem;
+}
+.prt6_title{
+    color: #044123;
+    text-align: center;
+    font-family: GT America;
+    font-size: 2.1875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.prt6_content{
+    color: #044123;
+    text-align: center;
+    font-family: GT America;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.prt6_btn{
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 1rem;
+}
+a.banner_btn {
+    text-align: left; /* Align the content to the left */
+    display: block; /* Make the link a block element */
+}
+
+.banner_btn {
+    width: 10.62rem;
+    height: 2.6rem;
+    border-radius: 4.77838rem;
+    padding: 0.51456rem 0.95569rem 0.51456rem 1.02919rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: .5rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, stroke 0.3s ease;
+}
+.banner_btn.Green{
+    background: #03B585;
+    color: #FFF;
+    margin: auto;
+}
+
+/* Hovring on the btn  */
+        
+.btn_info:hover
+.banner_btn.Green{
+    background-color:#f6f6f6;
+    box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+    -webkit-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+    -moz-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+}
+.btn_info:hover
+.banner_btn_text.Green {
+    color:#03B585;
+}
+
+.btn_info:hover
+.btn_arrow.green{
+    stroke:#03B585;
 }

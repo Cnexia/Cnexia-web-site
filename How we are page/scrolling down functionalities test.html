@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 2000px; /* Add enough height for scrolling */
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="square" style="top: 0px;"></div>
+  
+  <script>
+    const square = document.querySelector('.square');
+    const startPosition = 0; // Start position in pixels
+    const endPosition = 1080; // End position in pixels
+    let currentY = 0;
+
+    function animate() {
+      const scrollPosition = window.scrollY;
+      const translateY = Math.min(Math.max(scrollPosition, startPosition), endPosition);
+      currentY += (translateY - currentY) * 0.1; // Smoothing factor
+      square.style.transform = `translateY(${currentY}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
