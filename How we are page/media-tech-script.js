@@ -3,18 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightNavButton = document.querySelector(".prt7_nav_btn_right");
 
     const myimages = [
-      {
-        imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/IMG_00091-1698658710568.jpg",
-      },
-      {
-        imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/IMG_01341-1698658712415.jpg",
-      },
-      {
-        imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/IMG_02331-1698658713817.jpg",
-      },
-      {
-        imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/fsdsdfsvxcvzsg-16502948787961-1698658708676.jpg",
-      },
+        {
+            imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/IMG_00091-1698658710568.jpg",
+          },
+          {
+            imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/IMG_01341-1698658712415.jpg",
+          },
+          {
+            imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/IMG_02331-1698658713817.jpg",
+          },
+          {
+            imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/fsdsdfsvxcvzsg-16502948787961-1698658708676.jpg",
+          },
       // Add more images as needed
     ];
 
@@ -28,9 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update the background image of .prt7_layer1
         prt7Layer1.style.backgroundImage = `url('${myimage.imageSrc}')`;
-
-        // Automatically switch to the next image
-        startAutoSwitch();
       }
     }
 
@@ -48,8 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(intervalId);
     }
 
-    // Show the initial image
+    // Show the initial image and start auto-switching
     showImage(currentImageIndex);
+    startAutoSwitch();
 
     // Handle left navigation button click
     leftNavButton.addEventListener("click", function () {
@@ -58,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentImageIndex = myimages.length - 1;
       }
       showImage(currentImageIndex);
-      stopAutoSwitch(); // Stop auto-switch when manually navigating
+      stopAutoSwitch();
+      startAutoSwitch(); // Start auto-switch again after manual navigation
     });
 
     // Handle right navigation button click
@@ -68,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentImageIndex = 0;
       }
       showImage(currentImageIndex);
-      stopAutoSwitch(); // Stop auto-switch when manually navigating
+      stopAutoSwitch();
+      startAutoSwitch(); // Start auto-switch again after manual navigation
     });
   });
