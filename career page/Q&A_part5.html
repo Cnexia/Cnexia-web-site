@@ -4,157 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cnexia career</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FAFFFE;
+            font-family: Arial, sans-serif;
+            max-width: 1920px;
+            margin: auto;
+        }
+
+        /* Q&A part5 styles */
+        .part5 {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #FAFFFE;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .prt5_title {
+            color: #044123;
+            font-family: Montserrat, sans-serif;
+            font-size: 3.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .prt5_content {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .prt5_left {
+            max-width: 60rem;
+            width: 100%;
+        }
+
+        .question_holder {
+            display: grid;
+            grid-gap: 1rem;
+        }
+
+        .qt_header_and_content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .qt_container {
+            max-width: 55.7rem;
+            width: 100%;
+            padding: 0.5625rem 2.875rem 0.5rem 1.375rem;
+            align-items: center;
+            gap: 2.5rem;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+            background-color: #03B585;
+            display: flex;
+        }
+
+        .qt_question {
+            color: #FFF;
+            font-family: Montserrat, sans-serif;
+            font-size: 1.3125rem;
+            font-weight: 400;
+        }
+
+        .qt_nav_icon {
+            margin: auto;
+        }
+
+        .nav_arrow {
+            margin-top: 5px;
+            transform: rotate(-180deg);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .qt_content {
+            padding: 1rem;
+            color: #848484;
+            font-family: 'GT America', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            display: none;
+        }
+
+        .qt_header_and_content:hover .nav_arrow {
+            transform: rotate(0deg);
+        }
+
+        .qt_header_and_content:hover .qt_content {
+            display: block;
+        }
+
+        .prt5_right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line1, .line2 {
+            width: 100%;
+            stroke: rgba(3, 181, 133, 0.00);
+            height: 2rem;
+        }
+
+        .line2 {
+            height: 5rem;
+        }
+
+        
+    .qt_header_and_content .qt_container {
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .qt_header_and_content .qt_container:hover {
+        transform: translateX(10px); /* Adjust the desired translation value */
+    }
+
+    .qt_header_and_content .qt_container:hover .qt_content {
+        display: grid;
+    }
+
+    .qt_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    }
+    
+
+    </style>
 </head>
 <body>
-
-
-    <style>
-
-        /* ------------------- Globale Iputes ---------------- */
-      p{
-          margin: 0;
-
-      }
-
-      *{
-          padding: 0;
-          margin: auto;
-          max-width: 1920px;
-          
-          
-      }
-      body{
-        background-color: #FAFFFE;
-      }
-      .inner-container.ph-fluid-container, .container.ph-fluid-container {
-
-          padding-top: 0;
-      }
-
-              
-      a:link {
-      text-decoration: none;
-      }
-
-      a:visited {
-      text-decoration: none;
-      }
-      .ph-page {
-          margin-top: 100px;
-      }
-
-        /* ------------------- Q&A part5 style sheet ---------------- */
-
-      .part5{
-        max-width: 1200px;
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-rows: auto;
-        grid-gap: 2rem;
-      }
-
-      .prt5_title{
-        color: #044123;
-        font-family: Montserrat;
-        font-size: 3.75rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-
-      .prt5_content{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 60rem 12rem;
-        grid-gap: 2rem;
-
-      }
-      .prt5_left{
-        max-width: 60rem;
-        width: 100%;
-      }
-      
-      .question_holder{
-        width: 100%;
-        display:grid;
-        grid-template-rows: auto;
-        grid-gap: 1rem;
-      }
-      .qt_header{
-        width: 100%;
-        height: auto;
-        
-      }
-      .qt_container{
-        max-width: 55.7rem;
-        width: 100%;
-        padding: 0.5625rem 2.875rem 0.5rem 1.375rem;
-        align-items: center;
-        gap: 2.5rem;
-        flex-shrink: 0;
-        border-radius: 0.5rem;
-        background-color: #03B585;
-        display: flex;
-        flex-wrap: wrap;
-        
-      }
-      .qt_question{
-        color: #FFF;
-        font-family: Montserrat;
-        font-size: 1.3125rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-      .qt_nav_icon{
-        margin: auto;
-      }
-      .nav_arrow{
-        margin-top: 5px;
-      }
-      .qt_content{
-        padding: 1rem;
-        color: #848484;
-
-        font-family: GT America;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-
-      .prt5_right{
-        width: 100%;
-
-      }
-      
-
-
-
-
-    
-    </style>
-    
-
     <div class="part5">
         <div class="prt5_title">
             <p>
-                Nous répondons à vos questions avant que vous les formuliez. 
+                Nous répondons à vos questions avant que vous les formuliez. 
             </p>
         </div>
         <div class="prt5_content">
             <div class="prt5_left">
-
                 <div class="question_holder">
-                    <div class="qt_header">
+
+                    <div class="qt_header_and_content" onmouseover="toggleContent(this)">
                         <div class="qt_container">
                             <div class="qt_icone">
                                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
                                     <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
-                                    </svg>
-                                     
+                                </svg>
                             </div>
                             <div class="qt_question">
                                 <p>
@@ -164,36 +175,230 @@
                             <div class="qt_nav_icon">
                                 <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                    
+                                </svg>
                             </div>
                         </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
                     </div>
-                    <div class="qt_content">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
-                            Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
-                            Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
-                        </p>
-                    </div>
-                </div> 
 
+                    <div class="qt_header_and_content">
+                        <div class="qt_container">
+                            <div class="qt_icone">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
+                                    <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content">
+                        <div class="qt_container">
+                            <div class="qt_icone">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
+                                    <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content">
+                        <div class="qt_container">
+                            <div class="qt_icone">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
+                                    <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content">
+                        <div class="qt_container">
+                            <div class="qt_icone">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
+                                    <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content">
+                        <div class="qt_container">
+                            <div class="qt_icone">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
+                                    <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content">
+                        <div class="qt_container">
+                            <div class="qt_icone">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M22 0.5C10.1259 0.5 0.5 10.1259 0.5 22C0.5 33.8741 10.1259 43.5 22 43.5C33.8741 43.5 43.5 33.8741 43.5 22C43.5 10.1259 33.8741 0.5 22 0.5Z" fill="white"/>
+                                    <path d="M20.5918 25.6327V24.6531C20.5918 23.8571 20.898 23.0816 21.898 22.3061L22.9388 21.5102C23.7143 20.9184 24.1633 20.2857 24.1633 19.2857C24.1633 18.1429 23.4286 17.4082 22.3673 17.4082C21.1429 17.4082 20.3673 18.1837 20.3673 19.551C20.3673 19.898 20.3878 20.2245 20.4898 20.5714L17.3469 20.3061C17.2449 19.8367 17.2041 19.4694 17.2041 19.1224C17.2041 16.6327 19.1224 14.9592 22.3673 14.9592C25.5714 14.9592 27.5102 16.4286 27.5102 18.9388C27.5102 20.4286 26.7347 21.6735 25.5918 22.5918L24.6531 23.3673C24 23.898 23.7755 24.3061 23.7755 25.0408V25.6327H20.5918ZM20.449 30V26.8776H23.9592V30H20.449Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#044123" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, recusandae similique autem harum laborum perspiciatis! Quos eveniet rerum maxime magnam quis? Aspernatur quasi officiis laudantium beatae molestiae doloremque voluptatum! Doloremque.
+                                Minus quae, eligendi minima similique debitis modi suscipit molestiae? Aspernatur fuga corporis similique, dolores veniam perspiciatis quia quidem accusamus explicabo, rerum hic ipsum nesciunt minima voluptates voluptas illum iste nemo.
+                                Soluta, explicabo, dolore voluptas ad sed consectetur possimus at molestias ab perspiciatis velit sit tenetur sapiente corporis eius, in veritatis voluptatum? Voluptates consectetur ab qui atque quisquam, incidunt ipsum a.
+                            </p>
+                        </div>
+                    </div>
+
+
+                   
+                </div>
             </div>
             <div class="prt5_right">
-                <div class="line1">
-
-                </div>
+                <div class="line1"></div>
                 <div class="icon_right">
                     <svg width="187" height="351" viewBox="0 0 187 351" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M38.7668 90.8451C38.7668 101.55 30.0886 110.228 19.3834 110.228C8.67824 110.228 0 101.55 0 90.8451V63.1449C0 55.5882 2.89266 48.3181 8.0842 42.8271L39.8238 9.25638C45.41 3.34786 53.1825 0 61.3137 0H125.047C133.178 0 140.951 3.34786 146.537 9.25638L178.277 42.8271C183.468 48.3181 186.361 55.5882 186.361 63.1449V131.413C186.361 138.816 183.584 145.95 178.58 151.405L101.847 235.047C94.194 243.39 81.1306 243.671 73.1253 235.666C65.6463 228.187 65.3284 216.162 72.4018 208.299L135.804 137.812C140.688 132.383 143.39 125.338 143.39 118.034V77.0081C143.39 69.2621 140.351 61.8252 134.927 56.2961L127.798 49.0302C122.236 43.3617 114.629 40.168 106.687 40.168H79.326C71.3143 40.168 63.6454 43.4185 58.0739 49.1757L47.001 60.6177C41.7195 66.0752 38.7668 73.3723 38.7668 80.9669V90.8451ZM60.252 317.607C60.252 304.71 70.7077 294.254 83.6055 294.254C96.5033 294.254 106.959 304.71 106.959 317.607V326.949C106.959 339.847 96.5033 350.302 83.6055 350.302C70.7077 350.302 60.252 339.847 60.252 326.949V317.607Z" fill="#03B585"/>
-                        </svg>
-                        
+                    </svg>
                 </div>
-                <div class="line2">
-
-                </div>
+                <div class="line2"></div>
             </div>
         </div>
     </div>
+
+
+
+
+    <script>
+        function toggleContent(target) {
+    // Get all elements with class "qt_header_and_content"
+    var elements = document.querySelectorAll('.qt_header_and_content');
+
+    // Iterate through all elements
+    for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var content = element.querySelector('.qt_content');
+
+        if (element === target) {
+            // Toggle the content for the clicked element
+            content.style.maxHeight = (content.style.maxHeight === '1000px') ? '0' : '1000px';
+        } else {
+            // Close the content for other elements
+            content.style.maxHeight = '0';
+        }
+    }
+}
+
+    </script>
 </body>
 </html>
