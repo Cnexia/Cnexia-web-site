@@ -787,6 +787,9 @@ a.banner_btn {
     .prt5_icon.N4 .icon path{
         fill: #03B585;
     }
+    .integrity {
+        fill: #03B585;
+    }
 
     .prt5_icon.N1{
     margin-top: 100px;
@@ -941,14 +944,16 @@ a.banner_btn {
 @media (max-width: 450px){
     .hwa_banner{
         height: 24rem;
+
+        border-radius: 1rem;
     }
     .banner_img{
-        max-width: 18rem;
-        max-height: auto;
+        max-width: 19rem;
+        max-height: 20rem;
         width: 100%;
         height: 100%;
-        margin-top:20%;
-        left: 14%;
+        margin-top:17%;
+        left: 13%;
     }
     .text_right{
     font-size: 1.3rem;
@@ -964,7 +969,11 @@ a.banner_btn {
     }
     .hero{
     top: 3%;
-    left: 78%;
+    left: 85%;
+    }
+    .hero_img{
+        width: 3rem;
+        height: auto;
     }
     /* ----------------------> textes <------------------- */
     .prt2_main{
@@ -1033,6 +1042,14 @@ a.banner_btn {
         height: 20rem;
         border-radius: 1rem;
     }
+    .prt3_signature{
+        margin-top: 1rem;
+    }
+    .arrow{
+        width: 4.5rem;
+        height: auto;
+        margin-top: 2rem;
+    }
 
 
 }
@@ -1043,32 +1060,34 @@ a.banner_btn {
         height: 24rem;
     }
     .banner_img{
-        max-width: 16rem;
+        max-width: 19rem;
         max-height: auto;
         width: 100%;
         height: 100%;
-        margin-top:25%;
-        left: 10%;
+        margin-top:18%;
+        left: 7%;
     }
     .text_right{
     font-size: 1.2rem;
-    left: 62%;
-    top: 26%;
+    left: 65%;
+    top: 23%;
     max-width: 9rem;
     }
     .text_left{
         font-size: 1.3rem;
         left: 4%;
-        top: 15%;
+        top: 12%;
         max-width: 9rem;
     }
     .hero{
     top: 3%;
     
-    left: 78%;
+    left: 82%;
     
     
     }
+
+    
 }
 
 
@@ -1426,7 +1445,7 @@ a.banner_btn {
         </dic>
         <div class="banner_content">
             <div class="hero">
-                <svg width="66" height="67" viewBox="0 0 66 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hero_img" width="66" height="67" viewBox="0 0 66 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 25.3355L25.1474 0H53.4286C60.3689 0 66 5.71152 66 12.761V41.4688L40.8527 67V33.2542C40.8527 28.8625 37.3332 25.3127 33.0067 25.34H0V25.3355Z" fill="#FAFFFE"/>
                     </svg>                    
             </div>
@@ -1435,7 +1454,7 @@ a.banner_btn {
                     prometteuse</p>
             </div>
             <div class="text_left">
-                <p>Faites un pas<br>
+                <p id="dynamicTextContainer" >Faites un pas<br>
                     en avant</p>
             </div>
         </div>
@@ -1443,6 +1462,10 @@ a.banner_btn {
  
         </div>
     </div>
+
+    <script type="text/javascript" src="https://cnexia.github.io/Cnexia-web-site/How%20we%20are%20page/first_banner_script.js"></script>
+
+    
 
  <!-- ---------------------------------------- en savoir plus sur cnexia -------------------------------------------- --> 
 
@@ -1667,10 +1690,10 @@ a.banner_btn {
                 <div class="prt5_icon N5" class="prt5_icon N5">
                     <svg class="icon" width="63" height="57" viewBox="0 0 63 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M42.3915 40.9226V15.443C42.3915 14.7716 41.8472 14.2273 41.1757 14.2273H3.21576C2.54432 14.2273 2 14.7716 2 15.443V39.7026C2 40.374 2.54423 40.9183 3.21563 40.9183L42.3915 40.9226ZM42.3915 40.9226V30.3951H19.2247C18.5533 30.3951 18.009 29.8507 18.009 29.1793V3.21576C18.009 2.54431 18.5533 2 19.2247 2H59.7842C60.4557 2 61 2.54431 61 3.21576V29.1793C61 29.8507 60.4557 30.3951 59.7842 30.3951H42.39" stroke="white" stroke-width="3.40413" stroke-miterlimit="10" stroke-linecap="square"/>
-                        <path d="M23.5773 23.9933C24.5322 23.9933 25.3064 23.2191 25.3064 22.2641C25.3064 21.3092 24.5322 20.535 23.5773 20.535C22.6223 20.535 21.8481 21.3092 21.8481 22.2641C21.8481 23.2191 22.6223 23.9933 23.5773 23.9933Z" fill="white"/>
-                        <path d="M29.954 23.9933C30.9089 23.9933 31.6831 23.2191 31.6831 22.2641C31.6831 21.3092 30.9089 20.535 29.954 20.535C28.999 20.535 28.2249 21.3092 28.2249 22.2641C28.2249 23.2191 28.999 23.9933 29.954 23.9933Z" fill="white"/>
-                        <path d="M36.3307 23.9933C37.2856 23.9933 38.0598 23.2191 38.0598 22.2641C38.0598 21.3092 37.2856 20.535 36.3307 20.535C35.3757 20.535 34.6016 21.3092 34.6016 22.2641C34.6016 23.2191 35.3757 23.9933 36.3307 23.9933Z" fill="white"/>
-                        <path d="M9.55627 42.6475L6.88321 46.4939V42.6475H9.55627ZM15.3876 39.598H3.83374V51.9916C3.83374 53.2903 5.50731 53.8146 6.24837 52.7482L9.38571 48.2333L12.0588 44.3869L15.3861 39.598H15.3876Z" fill="white"/>
+                        <path class="integrity" d="M23.5773 23.9933C24.5322 23.9933 25.3064 23.2191 25.3064 22.2641C25.3064 21.3092 24.5322 20.535 23.5773 20.535C22.6223 20.535 21.8481 21.3092 21.8481 22.2641C21.8481 23.2191 22.6223 23.9933 23.5773 23.9933Z" fill="white"/>
+                        <path class="integrity" d="M29.954 23.9933C30.9089 23.9933 31.6831 23.2191 31.6831 22.2641C31.6831 21.3092 30.9089 20.535 29.954 20.535C28.999 20.535 28.2249 21.3092 28.2249 22.2641C28.2249 23.2191 28.999 23.9933 29.954 23.9933Z" fill="white"/>
+                        <path class="integrity" d="M36.3307 23.9933C37.2856 23.9933 38.0598 23.2191 38.0598 22.2641C38.0598 21.3092 37.2856 20.535 36.3307 20.535C35.3757 20.535 34.6016 21.3092 34.6016 22.2641C34.6016 23.2191 35.3757 23.9933 36.3307 23.9933Z" fill="white"/>
+                        <path class="integrity" d="M9.55627 42.6475L6.88321 46.4939V42.6475H9.55627ZM15.3876 39.598H3.83374V51.9916C3.83374 53.2903 5.50731 53.8146 6.24837 52.7482L9.38571 48.2333L12.0588 44.3869L15.3861 39.598H15.3876Z" fill="white"/>
                         </svg>
                         
                 </div>
