@@ -28,40 +28,48 @@
         }
 
         function applyScript(screenSize) {
-            updateContentHolderPositions(screenSize);
+          updateContentHolderPositions(screenSize);
 
-            contentHolders.forEach((contentHolder, index) => {
-                const className = contentHolder.className;
-                const positionY = contentHolderPositions[className.split(' ')[1]];
+          contentHolders.forEach((contentHolder, index) => {
+              const className = contentHolder.className;
+              const positionY = contentHolderPositions[className.split(' ')[1]];
 
-                contentHolder.addEventListener('mouseenter', () => {
-                    // Move the SVG to the specific Y position
-                    svg.style.transform = `translateY(${positionY}px)`;
-                    isHovering = true;
-                });
+              const handleHover = () => {
+                  // Move the SVG to the specific Y position
+                  svg.style.transform = `translateY(${positionY}px)`;
+                  isHovering = true;
+              };
 
-                contentHolder.addEventListener('mouseleave', () => {
-                    if (!isHovering) {
-                        // Reset the SVG position when the mouse leaves and no content holder is hovered
-                        svg.style.transform = 'translateY(0)';
-                    }
-                });
-            });
+              const handleLeave = () => {
+                  if (!isHovering) {
+                      // Reset the SVG position when the mouse leaves and no content holder is hovered
+                      svg.style.transform = 'translateY(0)';
+                  }
+              };
 
-            // Add an event listener to reset the SVG when the mouse leaves the entire container
-            document.getElementById('container').addEventListener('mouseleave', () => {
-                isHovering = false;
-                svg.style.transform = 'translateY(0)';
-            });
-        }
+              // Add mouse events
+              contentHolder.addEventListener('mouseenter', handleHover);
+              contentHolder.addEventListener('mouseleave', handleLeave);
 
-        // Define the media query for screen size under 850px
-        const mediaQueryUnder850 = window.matchMedia('(max-width: 849px)');
+              // Add touch events
+              contentHolder.addEventListener('touchstart', handleHover);
+              contentHolder.addEventListener('touchend', handleLeave);
+          });
 
-        // Initial check and apply appropriate script
-        applyScript(mediaQueryUnder850.matches ? 'small' : 'large');
+          // Add an event listener to reset the SVG when the mouse leaves the entire container
+          document.getElementById('container').addEventListener('mouseleave', () => {
+              isHovering = false;
+              svg.style.transform = 'translateY(0)';
+          });
+      }
 
-        // Add listener for changes in media query
-        mediaQueryUnder850.addListener((mq) => {
-            applyScript(mq.matches ? 'small' : 'large');
-        });
+      // Define the media query for screen size under 850px
+      const mediaQueryUnder850 = window.matchMedia('(max-width: 849px)');
+
+      // Initial check and apply appropriate script
+      applyScript(mediaQueryUnder850.matches ? 'small' : 'large');
+
+      // Add listener for changes in media query
+      mediaQueryUnder850.addListener((mq) => {
+          applyScript(mq.matches ? 'small' : 'large');
+      });
