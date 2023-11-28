@@ -5,13 +5,18 @@ function toggleContentHolder(container) {
     // Get the arrow within the clicked container
     var arrow = container.querySelector('.nav_arrow');
 
+    // Check if the content holder is already active
+    var isActive = contentHolder.classList.contains('active');
+
     // Hide all content holders and deactivate all arrows
     hideAllContentHolders();
     deactivateAllArrows();
 
-    // Toggle the "active" class for the clicked content holder and arrow
-    contentHolder.classList.toggle('active');
-    arrow.classList.toggle('active');
+    // If the content holder is not active, toggle the "active" class for the clicked content holder and arrow
+    if (!isActive) {
+        contentHolder.classList.toggle('active');
+        arrow.classList.toggle('active');
+    }
 }
 
 function hideAllContentHolders() {
