@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonial Slider</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .Testemoniales_slider{
+    max-width: 1200px;
+  }
+  .testimonial-container {
+    position: relative;
+    
+    max-width: 600px;
+    
+    overflow: hidden;
+    background-color: aquamarine;
+  }
+
+  .testimonial-slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-navigation {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+  }
+
+  .prev-button,
+  .next-button {
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+<div class="Testemoniales_Widget">
+    <div class="testimonial-container">
+        <div class="testimonial-slider">
+        <p class="testimonial-text">Testimonial 1: Insert your testimonial text here.</p>
+        </div>
+        <div class="testimonial-slide">
+        <p class="testimonial-text">Testimonial 2: Insert your testimonial text here.</p>
+        </div>
+    </div>
+    <div class="testimonial-navigation">
+        <button class="prev-button">Prev</button>
+        <button class="next-button">Next</button>
+    </div>
+</div>
+  <script>
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      testimonialSlides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+      testimonialSlides[index].style.display = 'block';
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + testimonialSlides.length) % testimonialSlides.length;
+      showSlide(currentSlide);
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % testimonialSlides.length;
+      showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
