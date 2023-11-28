@@ -52,7 +52,8 @@
 
        .part1{
             margin: 0 auto;
-            width: 99rem;
+            max-width: 98.875rem;
+            width: 100%;
             height: 37.8125rem;
             border-radius: 1.0625rem;
             background: radial-gradient(279.95% 131.93% at 9.1% 0%, #0ACB97 0%, #04805E 55.16%, #0D6245 100%);
@@ -60,8 +61,8 @@
             
         }
         .prt1_container{
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
+            display: flex;
+            flex-direction: row;
             
         }
         .prt1_left{
@@ -71,8 +72,8 @@
             font-style: normal;
             font-weight: 700;
             line-height: 111.9%;
-            margin-left: 10%;
-            margin-top: 10%;
+            margin-left: 5%;
+            margin-top: 3%;
         }
         .prt1_right{
             background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/MicrosoftTeams-image102-1700505871821.png");
@@ -100,7 +101,7 @@
         }
         .prt2_title{
             color: #044123;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.75rem;
             font-style: normal;
             font-weight: 700;
@@ -110,7 +111,7 @@
         .prt2_text{
             color: #044123;
             text-align: justify;
-            font-family: GT America;
+            font-family: 'GTAmerica-Light';
             font-size: 1.60563rem;
             font-style: normal;
             font-weight: 300;
@@ -136,7 +137,7 @@
 
         .prt3_title{
             color: #044123;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.75rem;
             font-style: normal;
             font-weight: 700;
@@ -160,7 +161,7 @@
         .prt3_paragraphe{
             color: #044123;
             text-align: justify;
-            font-family: GT America;
+            font-family: 'GTAmerica-Light';
             font-size: 1.60563rem;
             font-style: normal;
             font-weight: 300;
@@ -200,16 +201,16 @@
         }
         .banner_btn_text{
             color: #FFF;
-            font-family: Montserrat;
-            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .9rem;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
         }
 
         .banner_btn {
-            width: 10.62rem;
-            height: 2rem;
+            width: 11rem;
+            height: 2.75rem;
             border-radius: 4.77838rem;
             padding: 0.51456rem 0.95569rem 0.51456rem 1.02919rem;
             display: grid;
@@ -258,7 +259,8 @@
             
             border-radius: 0.375rem;
             background: #FFF;
-            box-shadow: 0px 4px 12px 0px rgba(3, 181, 133, 0.15); 
+            box-shadow: 0px 4px 12px 0px rgba(3, 181, 133, 0.15);
+            overflow: hidden; 
         }
         .prt4_card.first_row{
             width: 23.8125rem;
@@ -271,7 +273,7 @@
         .prt4_main_content{
             background: #FFF;
             display: grid;
-            grid-template-rows: auto;
+            grid-template-rows: 6rem auto;
             padding: 1rem;
             grid-gap: .5rem;
         }
@@ -284,7 +286,7 @@
         .card_title{
             color: #03B585;
             text-align: justify;
-            font-family: GT America;
+            font-family: 'GTAmerica-Bold';
             font-size: 1.8125rem;
             font-style: normal;
             font-weight: 700;
@@ -298,7 +300,7 @@
 
         .card_content{
             color: #044123;
-            font-family: GT America;
+            font-family: 'GTAmerica-Regular';
             font-size: 1.25rem;
             font-style: normal;
             font-weight: 400;
@@ -357,16 +359,18 @@
             height: auto;
             position: relative;
             overflow: hidden;
+            max-width: auto;
             width: 100%;
         }
 
         .qt_container {
-            max-width: 55.7rem;
-            width: 100%;
-            padding: 0.5625rem 2.875rem 0.5rem 1.375rem;
+            
+            width: 97%;
+            margin: 1% 1% 1% 1%;
             align-items: center;
             display: grid;
-            grid-template-columns:  10% 85% 5%;
+            grid-template-columns:  .1fr .85fr .05fr;
+            grid-gap: 3%;
             
         }
 
@@ -423,7 +427,7 @@
             margin: 3%;
             color: #044123;
             width: 85%;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3125rem;
             font-style: normal;
             font-weight: 500;
@@ -482,6 +486,141 @@
 
 
 
+        
+
+        @media (max-width: 1200px){
+            .prt5_right{
+                display: none;
+            }
+
+
+        }
+
+        @media (max-width: 450px){
+            .part1{
+            height: 24rem;
+            border-radius: 1rem;
+            }
+            .prt1_container{
+            display: flex;
+            flex-direction: column;
+            }
+            .prt1_right{
+            height: 24rem;
+            }
+            .prt1_left{
+            font-size: 1.8em;
+            }
+
+
+            .part2{
+            margin-top: 2rem;
+            }
+            .prt2_content{
+            margin-right: 10%;
+            margin-left: 10%;
+            }
+            .prt2_title{
+            font-size: 1.68rem;
+            }
+            .prt2_text{
+                font-size: 1.2rem;
+            }
+
+
+            .part3{
+            margin-top: 2rem;
+            }
+            .prt3_title{
+            font-size: 1.68rem;
+            margin-right: 10%;
+            margin-left: 10%;
+            width: auto;
+            }
+            .prt3_container{
+            display: flex;
+            flex-direction: column-reverse;
+            width: 80%;
+            gap: 1rem;
+            margin-right: 10%;
+            margin-left: 10%;
+            }
+            .prt3_text{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            gap: 1rem;
+            }
+            .prt3_paragraphe{
+            font-size: 1.2rem;
+            margin-top: 2%;
+            }
+            .prt3_img{
+            background-position: top center; /* Center the background image */
+            width: 100%;
+            height: 16rem; 
+            }
+
+
+
+
+
+            .part5{
+                padding: 0;
+                margin-right: 5%;
+            margin-left: 5%;
+            width: auto;
+                
+            }
+            .prt5_title {
+            font-size: 1.68rem;
+            margin-right: 10%;
+            margin-left: 10%;
+            }
+            .qt_question {
+            font-size: 1rem;
+            }
+
+            .qt_content {
+           
+            font-size: 1rem;
+            margin-left: 10%;
+            width: 80%;
+            
+            }
+            .qt_container{
+                width: 100%;
+                margin: .7rem 1% .7rem 1%;
+            }
+
+            .card_title{
+            
+            font-size: 1.68rem;
+            
+
+            }
+        
+        
+
+            .card_content{
+                
+                font-size: 1.2rem;
+                
+            }
+            .prt4_svg{
+                width: 50px;
+                height: 50px;
+            }
+
+          
+
+        }
+
+
+
+
+
+
    
 
 
@@ -495,7 +634,7 @@
                 <p>
                    <span style="color: white;">Ensemble,</span> <br>
                     construisons <br>
-                    votre carrière <br>
+                    votre carrière 
                 </p>
             </div>
             <div class="prt1_right">
@@ -571,7 +710,7 @@
                 <P>Santé mentale</P>
               </div>
               <div class="card_icon">
-                <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="prt4_svg" width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_1396_3520)">
                   <path d="M77 41.7083C77 44.8204 74.7542 48.125 70.5833 48.125H69.5246L68.8187 53.4508C67.76 61.4075 60.9262 67.375 52.9054 67.375H51.3333C51.3333 72.6687 47.0021 77 41.7083 77H19.25C13.9562 77 9.62499 72.6687 9.62499 67.375V64.2629C9.62499 61.3754 8.79082 58.7125 7.25082 56.6912C1.86082 49.665 -0.641677 40.9062 0.160406 32.0192C1.60416 15.8812 14.3092 2.53458 30.3187 0.352909C43.2804 -1.44376 55.6967 3.75374 63.525 14.1808C67.5996 19.2179 77 37.1525 77 41.7083ZM70.5833 41.7083C70.1983 38.8208 62.6587 23.2925 58.4558 18.1271C52.8092 10.6196 44.4033 6.41666 35.2917 6.41666C33.9442 6.41666 32.5646 6.51291 31.185 6.70541C18.095 8.50208 7.73207 19.4104 6.51291 32.5967C5.83916 39.8796 7.92457 47.0342 12.32 52.8092C14.6942 55.9212 16.0096 59.9958 16.0096 64.2629V67.375C16.0096 69.1396 17.4533 70.5833 19.2179 70.5833H41.6762C43.4408 70.5833 44.8846 69.1396 44.8846 67.375V64.1667C44.8846 62.4021 46.3283 60.9583 48.0929 60.9583H52.8733C57.6858 60.9583 61.7925 57.365 62.4021 52.5846L63.4608 44.4996C63.6854 42.8954 65.0329 41.7083 66.6371 41.7083H70.4871H70.5833Z" fill="#044123"/>
                   <path d="M45.4583 35.0417C47.2229 35.0417 48.6667 33.5979 48.6667 31.8333C48.6667 30.0687 47.2229 28.625 45.4583 28.625H39.0417V22.2083C39.0417 20.4437 37.5979 19 35.8333 19C34.0688 19 32.625 20.4437 32.625 22.2083V28.625H26.2083C24.4438 28.625 23 30.0687 23 31.8333C23 33.5979 24.4438 35.0417 26.2083 35.0417H32.625V41.4583C32.625 43.2229 34.0688 44.6667 35.8333 44.6667C37.5979 44.6667 39.0417 43.2229 39.0417 41.4583V35.0417H45.4583Z" fill="#03B585"/>
@@ -601,7 +740,7 @@
                 <P>Bien-être</P>
               </div>
               <div class="card_icon">
-                <svg width="80" height="73" viewBox="0 0 80 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  class="prt4_svg" width="80" height="73" viewBox="0 0 80 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.0143 40.9431L35.5065 67.809C38.0421 70.4813 42.3 70.4813 44.8356 67.809L70.3277 40.9431C78.3468 32.4919 78.3468 18.7897 70.3277 10.3384C62.3086 1.88718 49.307 1.88719 41.2879 10.3384V10.3384C40.6808 10.9783 39.6613 10.9783 39.0541 10.3384V10.3384C31.035 1.88719 18.0334 1.88719 10.0143 10.3384C1.99522 18.7897 1.99522 32.4919 10.0143 40.9431Z" stroke="#044123" stroke-width="6.22"/>
                   <path d="M29.5164 35.0637H49.8557" stroke="#03B585" stroke-width="7.22" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M39.5012 25.0792L39.5012 45.4185" stroke="#03B585" stroke-width="7.22" stroke-linecap="round" stroke-linejoin="round"/>
@@ -626,7 +765,7 @@
                   et confort</P>
               </div>
               <div class="card_icon">
-                <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  class="prt4_svg" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="14.3333" cy="14.3333" r="14.3333" transform="matrix(-1 0 0 1 57.3334 10.75)" stroke="#03B585" stroke-width="5.375"/>
                   <path d="M17.9166 60.6825C17.9166 57.5995 19.8547 54.8494 22.758 53.8125V53.8125C35.8478 49.1376 50.1521 49.1376 63.2419 53.8125V53.8125C66.1452 54.8494 68.0833 57.5995 68.0833 60.6825V65.3964C68.0833 69.6514 64.3147 72.9199 60.1025 72.3181L56.6825 71.8296C47.6069 70.533 38.393 70.533 29.3174 71.8296L25.8974 72.3181C21.6852 72.9199 17.9166 69.6514 17.9166 65.3964V60.6825Z" stroke="#044123" stroke-width="6"/>
                   </svg>
@@ -652,7 +791,7 @@
                   évolution</P>
               </div>
               <div class="card_icon">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  class="prt4_svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_1396_3536)">
                   <path d="M0 33.7003C0.138542 33.0841 0.257031 32.4643 0.417448 31.8537C1.77552 26.7039 6.49141 23.0162 11.8125 22.9031C14.237 22.8521 16.6414 22.8886 18.8763 24.0024C23.3388 26.2281 25.7633 29.8375 25.9109 34.825C26.024 38.6641 25.9565 42.5086 25.9109 46.3495C25.9036 46.9292 25.7286 47.5964 25.4042 48.0667C23.368 51.0289 22.1885 54.3248 21.6016 57.8248C21.268 59.8099 21.1148 61.8388 21.0419 63.8531C20.9307 66.9175 18.9674 69.3091 15.9341 69.8688C15.8065 69.8925 15.6844 69.9544 15.5604 69.9982H10.3742C10.3396 69.9709 10.3086 69.9271 10.2685 69.918C6.51693 69.0302 4.97839 67.0888 4.90365 63.2461C4.82708 59.2831 4.15625 55.4203 2.53932 51.7836C1.81563 50.1576 0.854948 48.6391 0 47.0714C0 42.6143 0 38.1555 0 33.6985L0 33.7003ZM20.4732 39.9365H20.4677C20.4677 38.2302 20.4951 36.524 20.4622 34.8196C20.4057 31.9576 18.4971 29.4018 15.7281 28.6709C14.6508 28.3865 13.4823 28.3755 12.3539 28.3755C8.28516 28.3701 5.46693 31.2229 5.45964 35.2935C5.45417 38.2266 5.49063 41.1615 5.44141 44.0946C5.425 45.1063 5.55807 46.0086 6.17969 46.838C6.50234 47.2683 6.71927 47.7841 6.95807 48.2727C9.29505 53.0815 10.2867 58.1948 10.3578 63.5086C10.3651 64.1029 10.5091 64.5076 11.1562 64.5185C12.3612 64.5367 13.568 64.5386 14.7729 64.5167C15.2542 64.5076 15.5513 64.2888 15.5732 63.7183C15.6279 62.2654 15.6789 60.8089 15.8411 59.3651C16.3716 54.6383 17.6878 50.1594 20.1888 46.0706C20.3547 45.799 20.4568 45.4435 20.4622 45.1245C20.4878 43.3964 20.475 41.6683 20.475 39.9401L20.4732 39.9365Z" fill="#044123"/>
                   <path d="M28.1167 69.9999C27.0193 69.659 26.1571 69.0885 25.8836 67.8707C25.5081 66.2064 26.6164 64.6715 28.3172 64.5403C28.5214 64.5239 28.7255 64.5257 28.9315 64.5257C41.5571 64.5257 54.1808 64.5257 66.8063 64.5275C67.1453 64.5275 67.4953 64.5312 67.8216 64.6095C68.9719 64.8885 69.7959 65.8856 69.8779 67.0468C69.9617 68.2426 69.2617 69.3455 68.1352 69.7866C67.9456 69.8614 67.7542 69.9288 67.5646 69.9981H28.1185L28.1167 69.9999Z" fill="#044123"/>
@@ -687,7 +826,7 @@
                   financière </P>
               </div>
               <div class="card_icon">
-                <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  class="prt4_svg" width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M66.5002 22.75V22.75C66.5002 14.6192 59.0376 8.53644 51.0738 10.176L20.9713 16.3736C12.8372 18.0483 7.00024 25.2093 7.00024 33.5141L7.00024 45.5" stroke="#03B585" stroke-width="5.25"/>
                   <rect x="7.00043" y="21.0002" width="70" height="56" rx="17.5" stroke="#044123" stroke-width="6.25"/>
                   <path d="M21.0004 61.2502H42.0004" stroke="#03B585" stroke-width="5.25" stroke-linecap="round" stroke-linejoin="round"/>
@@ -715,7 +854,7 @@
                   reconnaissance</P>
               </div>
               <div class="card_icon">
-                <svg width="78" height="75" viewBox="0 0 78 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  class="prt4_svg" width="78" height="75" viewBox="0 0 78 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.00551 4V59.5736C4.00552 62.1705 3.37869 71 15.4971 71C27.6156 71 58.8519 71 74 71" stroke="#044123" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M17 48.5L37 29.5L46.5 38.5L70.5 15M70.5 15V32.5M70.5 15H53" stroke="#03B585" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -1040,7 +1179,7 @@
         </div>
 
 
-        <script type="text/javascript" src="./part5_career_script.js"></script>
+        <script type="text/javascript" src="https://cnexia.github.io/Cnexia-web-site/career%20page/part5_career_script.js"></script>
 
 
 
