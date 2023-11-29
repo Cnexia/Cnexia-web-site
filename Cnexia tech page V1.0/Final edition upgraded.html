@@ -110,47 +110,40 @@
   /*---------------!Picto widget style!---------------*/  
  
   .Picto_widget{
-      position: relative;
+      margin: 0 auto;
+      max-width: 98.875rem;
       width: 100%;
-      max-width: 120rem;
-      height: 31.25rem;
-      top: 0;
-      left: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: auto;
-      margin-right: auto;
-      
-      
-      
+      height: 34rem;
+      border-radius: 1.0625rem;
+      overflow: hidden;
+      position: relative;
     }
     
     .Picto_widget video{
     position: absolute;
     width: 100%;
-      height: 100%;
-      max-height: 31.25rem;
-      object-fit: cover;
-      top: 0;
-      left: 0;
+    height: 100%;
+    object-fit: cover;
+    
       
+      
+    }
+    .svg-layer{
+      position: absolute;
+      
+      top: 2rem;
+      right: 5rem;
     }
     .picto_content{
       position: relative;
-      top: 0;
-      left: 0;
-      width: 41%;
+      width: 50%;
       height: 80%;
-      max-height: 31.25rem;
-      
-      
-      justify-content: flex-start;
-      text-align: left;
-      display: block;
-      grid-template-rows: .3fr .5fr .2fr;
-      grid-gap: 2rem;
+      display: flex;
+      flex-direction: column;
       
       overflow: hidden;
+      margin-top: 1%;
+      margin-left: 1%;
       
     }
 
@@ -238,7 +231,7 @@
     opacity: 1;
   }
   .picto_svg{
-    margin-top: 3rem;
+    margin-top: 8%;
     margin-left: 2rem;
   }
   .picto_button{
@@ -1112,7 +1105,9 @@ padding-top: 15px;
 
 @media (max-width: 1024px){
     /* Tablette format */
-
+    .svg-layer{
+      display: none;
+    }
     .picto_content{
      
      width: fit-content;
@@ -1367,11 +1362,17 @@ padding-top: 15px;
 }
 
 @media (max-width: 450px){
+
     /* Phone format */
+    .Picto_widget {
+    
+    height: 31rem;
+    
+}
   .picto_content{  
     width: 80%;    
     height: 80%;
-    max-height: 31.25rem; 
+    
   }
   .main_slide_pictor_button {
       padding: 0.5em 1.5em;
@@ -1388,6 +1389,9 @@ padding-top: 15px;
         opacity: .4;  
         margin: 0 5px;
         cursor: pointer;
+    }
+    .picto_svg{
+      margin-top: 3rem;
     }
     .picto_svg svg{
     width: 18rem;
@@ -1754,6 +1758,12 @@ padding-top: 15px;
   <video width=100%   preload="true" playsinline autoplay loop volume="0"  muted="muted" >
       <source src="https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/videos/cnexiatech_V41-1690888471506.mp4" type="video/mp4"> 
   </video>
+  <div class="svg-layer">
+    <svg width="1727" height="570" viewBox="0 0 1727 570" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 1.5H1636.5C1666.33 0.166663 1726 16.2 1726 91C1726 165.8 1726 455.833 1726 570" stroke="white"/>
+      </svg>
+      
+  </div>
 
 
 
