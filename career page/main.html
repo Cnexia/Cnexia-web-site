@@ -68,22 +68,24 @@
         .prt1_left{
             color: #044123;
             font-family: Montserrat;
-            font-size: 4.81575rem;
+            font-size: 4.2rem;
             font-style: normal;
             font-weight: 700;
             line-height: 111.9%;
             margin-left: 5%;
             margin-top: 3%;
+            width: 35%;
         }
         .prt1_right{
             background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/MicrosoftTeams-image102-1700505871821.png");
-            width: 100%;
+            width: 70%;
             height: 37.8125rem;
             display: flex;
             background-size: cover; /* Scale the background image to cover the container */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
             background-position: bottom right; /* Center the background image */
             top: 0;
+
         }
 
         /* ------------------- Part 2 styles ---------------- */
@@ -262,11 +264,8 @@
             box-shadow: 0px 4px 12px 0px rgba(3, 181, 133, 0.15);
             overflow: hidden; 
         }
-        .prt4_card.first_row{
-            width: 23.8125rem;
-            height: 18.625rem;
-        }
-        .prt4_card.second_row{
+        
+        .prt4_card{
             width: 23.8125rem;
             height: 21.625rem;
         }
@@ -306,7 +305,12 @@
             font-weight: 400;
             line-height: normal;
         }
-
+        .prt4_card  {
+         transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+        }
+        .prt4_card:hover {
+            transform: scale(1.05);
+        }
 
         /* ------------------- part5 styles sheet ---------------- */
 
@@ -703,35 +707,41 @@
 
     <div class="part4">
         <!---------------------- this is the card template <--------------------->
-        <div class="prt4_card first_row">
-          <div class="prt4_main_content">
-            <div class="card_header">
-              <div class="card_title">
-                <P>Santé mentale</P>
+        
+        <div class="prt4_card second_row">
+            <div class="prt4_main_content">
+              <div class="card_header">
+                <div class="card_title">
+                  <P>Promotion et
+                    évolution</P>
+                </div>
+                <div class="card_icon">
+                  <svg  class="prt4_svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1396_3536)">
+                    <path d="M0 33.7003C0.138542 33.0841 0.257031 32.4643 0.417448 31.8537C1.77552 26.7039 6.49141 23.0162 11.8125 22.9031C14.237 22.8521 16.6414 22.8886 18.8763 24.0024C23.3388 26.2281 25.7633 29.8375 25.9109 34.825C26.024 38.6641 25.9565 42.5086 25.9109 46.3495C25.9036 46.9292 25.7286 47.5964 25.4042 48.0667C23.368 51.0289 22.1885 54.3248 21.6016 57.8248C21.268 59.8099 21.1148 61.8388 21.0419 63.8531C20.9307 66.9175 18.9674 69.3091 15.9341 69.8688C15.8065 69.8925 15.6844 69.9544 15.5604 69.9982H10.3742C10.3396 69.9709 10.3086 69.9271 10.2685 69.918C6.51693 69.0302 4.97839 67.0888 4.90365 63.2461C4.82708 59.2831 4.15625 55.4203 2.53932 51.7836C1.81563 50.1576 0.854948 48.6391 0 47.0714C0 42.6143 0 38.1555 0 33.6985L0 33.7003ZM20.4732 39.9365H20.4677C20.4677 38.2302 20.4951 36.524 20.4622 34.8196C20.4057 31.9576 18.4971 29.4018 15.7281 28.6709C14.6508 28.3865 13.4823 28.3755 12.3539 28.3755C8.28516 28.3701 5.46693 31.2229 5.45964 35.2935C5.45417 38.2266 5.49063 41.1615 5.44141 44.0946C5.425 45.1063 5.55807 46.0086 6.17969 46.838C6.50234 47.2683 6.71927 47.7841 6.95807 48.2727C9.29505 53.0815 10.2867 58.1948 10.3578 63.5086C10.3651 64.1029 10.5091 64.5076 11.1562 64.5185C12.3612 64.5367 13.568 64.5386 14.7729 64.5167C15.2542 64.5076 15.5513 64.2888 15.5732 63.7183C15.6279 62.2654 15.6789 60.8089 15.8411 59.3651C16.3716 54.6383 17.6878 50.1594 20.1888 46.0706C20.3547 45.799 20.4568 45.4435 20.4622 45.1245C20.4878 43.3964 20.475 41.6683 20.475 39.9401L20.4732 39.9365Z" fill="#044123"/>
+                    <path d="M28.1167 69.9999C27.0193 69.659 26.1571 69.0885 25.8836 67.8707C25.5081 66.2064 26.6164 64.6715 28.3172 64.5403C28.5214 64.5239 28.7255 64.5257 28.9315 64.5257C41.5571 64.5257 54.1808 64.5257 66.8063 64.5275C67.1453 64.5275 67.4953 64.5312 67.8216 64.6095C68.9719 64.8885 69.7959 65.8856 69.8779 67.0468C69.9617 68.2426 69.2617 69.3455 68.1352 69.7866C67.9456 69.8614 67.7542 69.9288 67.5646 69.9981H28.1185L28.1167 69.9999Z" fill="#044123"/>
+                    <path d="M0 47.0732C0.853125 48.641 1.81563 50.1594 2.53932 51.7855C4.15625 55.4222 4.82891 59.2831 4.90365 63.248C4.97656 67.0907 6.51693 69.0321 10.2685 69.9199C10.3086 69.929 10.3396 69.9727 10.3742 70.0001H0C0 62.3584 0 54.7167 0 47.0732Z" fill="white"/>
+                    <path d="M60.7305 29.9542C60.5901 33.1826 59.6094 36.4092 58.0544 39.4498C54.3065 46.7743 48.876 52.4982 41.6008 56.4011C38.3396 58.1493 34.8578 59.2139 31.1463 59.4326C30.5612 59.4673 29.956 59.4673 29.3854 59.3542C28.0838 59.0954 27.2526 57.9506 27.3109 56.618C27.3693 55.2636 28.3391 54.1061 29.6825 54.0568C37.9896 53.7469 43.9742 49.2553 49.0802 43.2597C51.831 40.0295 53.931 36.3964 54.9062 32.211C55.1068 31.3542 55.2161 30.4646 55.2599 29.5842C55.351 27.7376 56.4266 26.5636 58.0872 26.5946C59.7114 26.6256 60.7651 27.8779 60.7323 29.9542H60.7305Z" fill="#03B585"/>
+                    <path d="M12.837 0.147711C18.1034 0.153179 22.1302 4.2274 22.1083 9.52844C22.0883 14.5196 17.8682 18.674 12.8206 18.6722C7.74923 18.6685 3.5237 14.4649 3.5474 9.44641C3.57657 4.16906 7.59975 0.142242 12.837 0.147711ZM16.6505 9.3425C16.6542 7.29354 14.9333 5.58547 12.857 5.57818C10.7716 5.56906 9.03438 7.24615 9.01251 9.29146C8.98881 11.4735 10.6385 13.1725 12.806 13.1925C14.9534 13.2144 16.6469 11.5191 16.6523 9.3425H16.6505Z" fill="#044123"/>
+                    <path d="M69.8797 24.1846C69.887 25.4789 69.2417 26.4761 68.219 26.8971C67.0888 27.3638 66.0625 27.1451 65.2076 26.2992C63.5104 24.6221 61.8734 22.8813 60.1435 21.2388C59.6823 20.8013 59.0023 20.4969 58.3734 20.3547C57.5294 20.1633 56.782 20.5497 56.1695 21.1714C54.4943 22.8721 52.8172 24.5693 51.1292 26.2573C50.3417 27.0448 49.3938 27.3328 48.3182 26.9919C47.3357 26.6784 46.7086 25.9912 46.4753 24.9794C46.2602 24.0461 46.4971 23.2021 47.1589 22.5258C49.0182 20.6245 50.8521 18.694 52.7898 16.8747C55.7357 14.1076 60.7451 14.1896 63.6544 17.0096C65.481 18.7815 67.2492 20.6154 69.0411 22.4237C69.5771 22.9633 69.8615 23.6122 69.8779 24.1828L69.8797 24.1846Z" fill="#03B585"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1396_3536">
+                    <rect width="70" height="70" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                    
+                </div>
               </div>
-              <div class="card_icon">
-                <svg class="prt4_svg" width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_1396_3520)">
-                  <path d="M77 41.7083C77 44.8204 74.7542 48.125 70.5833 48.125H69.5246L68.8187 53.4508C67.76 61.4075 60.9262 67.375 52.9054 67.375H51.3333C51.3333 72.6687 47.0021 77 41.7083 77H19.25C13.9562 77 9.62499 72.6687 9.62499 67.375V64.2629C9.62499 61.3754 8.79082 58.7125 7.25082 56.6912C1.86082 49.665 -0.641677 40.9062 0.160406 32.0192C1.60416 15.8812 14.3092 2.53458 30.3187 0.352909C43.2804 -1.44376 55.6967 3.75374 63.525 14.1808C67.5996 19.2179 77 37.1525 77 41.7083ZM70.5833 41.7083C70.1983 38.8208 62.6587 23.2925 58.4558 18.1271C52.8092 10.6196 44.4033 6.41666 35.2917 6.41666C33.9442 6.41666 32.5646 6.51291 31.185 6.70541C18.095 8.50208 7.73207 19.4104 6.51291 32.5967C5.83916 39.8796 7.92457 47.0342 12.32 52.8092C14.6942 55.9212 16.0096 59.9958 16.0096 64.2629V67.375C16.0096 69.1396 17.4533 70.5833 19.2179 70.5833H41.6762C43.4408 70.5833 44.8846 69.1396 44.8846 67.375V64.1667C44.8846 62.4021 46.3283 60.9583 48.0929 60.9583H52.8733C57.6858 60.9583 61.7925 57.365 62.4021 52.5846L63.4608 44.4996C63.6854 42.8954 65.0329 41.7083 66.6371 41.7083H70.4871H70.5833Z" fill="#044123"/>
-                  <path d="M45.4583 35.0417C47.2229 35.0417 48.6667 33.5979 48.6667 31.8333C48.6667 30.0687 47.2229 28.625 45.4583 28.625H39.0417V22.2083C39.0417 20.4437 37.5979 19 35.8333 19C34.0688 19 32.625 20.4437 32.625 22.2083V28.625H26.2083C24.4438 28.625 23 30.0687 23 31.8333C23 33.5979 24.4438 35.0417 26.2083 35.0417H32.625V41.4583C32.625 43.2229 34.0688 44.6667 35.8333 44.6667C37.5979 44.6667 39.0417 43.2229 39.0417 41.4583V35.0417H45.4583Z" fill="#03B585"/>
-                  </g>
-                  <defs>
-                  <clipPath id="clip0_1396_3520">
-                  <rect width="77" height="77" fill="white"/>
-                  </clipPath>
-                  </defs>
-                  </svg>
-                  
+              <div class="card_content">
+                <P>
+                    Chez Cnexia, les opportunités d'avancement professionnel sont à portée de main pour vous. <br>
+                    Dès votre intégration un plan de carrière clair est mis à votre disposition.</P>
               </div>
-            </div>
-            <div class="card_content">
-              <P>
-                Nous nous soucions de la santé mentale de nos collaborateurs et de leurs membres de famille et nous mettons à leur disposition des ressources professionnelles pour leur accompagner dans les moments difficiles.
-              </P>
             </div>
           </div>
-        </div>
-    
     
         <div class="prt4_card first_row">
           <div class="prt4_main_content">
@@ -750,8 +760,9 @@
               </div>
             </div>
             <div class="card_content">
-              <P>
-                Un club social est à la disposition de nos collaborateurs pour leur permettre de bénéficier de remises exceptionnelles et des prestations à caractère social, culturel ou de loisir.          </P>
+              <p>
+                Un club social est à votre disposition pour vous permettre de bénéficier de remises exceptionnelles et des prestations à caractère social, culturel ou de loisir.  
+              </p>
             </div>
           </div>
         </div>
@@ -775,47 +786,15 @@
             </div>
             <div class="card_content">
               <P>
-                Notre plateforme de conventions facilite la vie de nos employés en leur offrant la possibilité d’accéder à des offres exclusives sur un large choix de marques : Salles de sport, tickets de spectacles,
-                électroménager, et plus encore.
+                Vous aurez accès à une plateforme de conventions contenant une large gamme de produits et de services exclusifs à des prix conventionnés : plus de 50 marques de renom et
+<br> 30 000 références de produits et services.
               </P>
             </div>
           </div>
         </div>
     
     
-        <div class="prt4_card second_row">
-          <div class="prt4_main_content">
-            <div class="card_header">
-              <div class="card_title">
-                <P>Promotion et
-                  évolution</P>
-              </div>
-              <div class="card_icon">
-                <svg  class="prt4_svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_1396_3536)">
-                  <path d="M0 33.7003C0.138542 33.0841 0.257031 32.4643 0.417448 31.8537C1.77552 26.7039 6.49141 23.0162 11.8125 22.9031C14.237 22.8521 16.6414 22.8886 18.8763 24.0024C23.3388 26.2281 25.7633 29.8375 25.9109 34.825C26.024 38.6641 25.9565 42.5086 25.9109 46.3495C25.9036 46.9292 25.7286 47.5964 25.4042 48.0667C23.368 51.0289 22.1885 54.3248 21.6016 57.8248C21.268 59.8099 21.1148 61.8388 21.0419 63.8531C20.9307 66.9175 18.9674 69.3091 15.9341 69.8688C15.8065 69.8925 15.6844 69.9544 15.5604 69.9982H10.3742C10.3396 69.9709 10.3086 69.9271 10.2685 69.918C6.51693 69.0302 4.97839 67.0888 4.90365 63.2461C4.82708 59.2831 4.15625 55.4203 2.53932 51.7836C1.81563 50.1576 0.854948 48.6391 0 47.0714C0 42.6143 0 38.1555 0 33.6985L0 33.7003ZM20.4732 39.9365H20.4677C20.4677 38.2302 20.4951 36.524 20.4622 34.8196C20.4057 31.9576 18.4971 29.4018 15.7281 28.6709C14.6508 28.3865 13.4823 28.3755 12.3539 28.3755C8.28516 28.3701 5.46693 31.2229 5.45964 35.2935C5.45417 38.2266 5.49063 41.1615 5.44141 44.0946C5.425 45.1063 5.55807 46.0086 6.17969 46.838C6.50234 47.2683 6.71927 47.7841 6.95807 48.2727C9.29505 53.0815 10.2867 58.1948 10.3578 63.5086C10.3651 64.1029 10.5091 64.5076 11.1562 64.5185C12.3612 64.5367 13.568 64.5386 14.7729 64.5167C15.2542 64.5076 15.5513 64.2888 15.5732 63.7183C15.6279 62.2654 15.6789 60.8089 15.8411 59.3651C16.3716 54.6383 17.6878 50.1594 20.1888 46.0706C20.3547 45.799 20.4568 45.4435 20.4622 45.1245C20.4878 43.3964 20.475 41.6683 20.475 39.9401L20.4732 39.9365Z" fill="#044123"/>
-                  <path d="M28.1167 69.9999C27.0193 69.659 26.1571 69.0885 25.8836 67.8707C25.5081 66.2064 26.6164 64.6715 28.3172 64.5403C28.5214 64.5239 28.7255 64.5257 28.9315 64.5257C41.5571 64.5257 54.1808 64.5257 66.8063 64.5275C67.1453 64.5275 67.4953 64.5312 67.8216 64.6095C68.9719 64.8885 69.7959 65.8856 69.8779 67.0468C69.9617 68.2426 69.2617 69.3455 68.1352 69.7866C67.9456 69.8614 67.7542 69.9288 67.5646 69.9981H28.1185L28.1167 69.9999Z" fill="#044123"/>
-                  <path d="M0 47.0732C0.853125 48.641 1.81563 50.1594 2.53932 51.7855C4.15625 55.4222 4.82891 59.2831 4.90365 63.248C4.97656 67.0907 6.51693 69.0321 10.2685 69.9199C10.3086 69.929 10.3396 69.9727 10.3742 70.0001H0C0 62.3584 0 54.7167 0 47.0732Z" fill="white"/>
-                  <path d="M60.7305 29.9542C60.5901 33.1826 59.6094 36.4092 58.0544 39.4498C54.3065 46.7743 48.876 52.4982 41.6008 56.4011C38.3396 58.1493 34.8578 59.2139 31.1463 59.4326C30.5612 59.4673 29.956 59.4673 29.3854 59.3542C28.0838 59.0954 27.2526 57.9506 27.3109 56.618C27.3693 55.2636 28.3391 54.1061 29.6825 54.0568C37.9896 53.7469 43.9742 49.2553 49.0802 43.2597C51.831 40.0295 53.931 36.3964 54.9062 32.211C55.1068 31.3542 55.2161 30.4646 55.2599 29.5842C55.351 27.7376 56.4266 26.5636 58.0872 26.5946C59.7114 26.6256 60.7651 27.8779 60.7323 29.9542H60.7305Z" fill="#03B585"/>
-                  <path d="M12.837 0.147711C18.1034 0.153179 22.1302 4.2274 22.1083 9.52844C22.0883 14.5196 17.8682 18.674 12.8206 18.6722C7.74923 18.6685 3.5237 14.4649 3.5474 9.44641C3.57657 4.16906 7.59975 0.142242 12.837 0.147711ZM16.6505 9.3425C16.6542 7.29354 14.9333 5.58547 12.857 5.57818C10.7716 5.56906 9.03438 7.24615 9.01251 9.29146C8.98881 11.4735 10.6385 13.1725 12.806 13.1925C14.9534 13.2144 16.6469 11.5191 16.6523 9.3425H16.6505Z" fill="#044123"/>
-                  <path d="M69.8797 24.1846C69.887 25.4789 69.2417 26.4761 68.219 26.8971C67.0888 27.3638 66.0625 27.1451 65.2076 26.2992C63.5104 24.6221 61.8734 22.8813 60.1435 21.2388C59.6823 20.8013 59.0023 20.4969 58.3734 20.3547C57.5294 20.1633 56.782 20.5497 56.1695 21.1714C54.4943 22.8721 52.8172 24.5693 51.1292 26.2573C50.3417 27.0448 49.3938 27.3328 48.3182 26.9919C47.3357 26.6784 46.7086 25.9912 46.4753 24.9794C46.2602 24.0461 46.4971 23.2021 47.1589 22.5258C49.0182 20.6245 50.8521 18.694 52.7898 16.8747C55.7357 14.1076 60.7451 14.1896 63.6544 17.0096C65.481 18.7815 67.2492 20.6154 69.0411 22.4237C69.5771 22.9633 69.8615 23.6122 69.8779 24.1828L69.8797 24.1846Z" fill="#03B585"/>
-                  </g>
-                  <defs>
-                  <clipPath id="clip0_1396_3536">
-                  <rect width="70" height="70" fill="white"/>
-                  </clipPath>
-                  </defs>
-                  </svg>
-                  
-                  
-              </div>
-            </div>
-            <div class="card_content">
-              <P>
-                Chez Cnexia, les opportunités d'avancement professionnel sont à portée de main pour les collaborateurs les plus talentueux. Dès votre intégration un plan de carrière clair est mis à votre disposition.          </P>
-            </div>
-          </div>
-        </div>
+        
     
     
         <div class="prt4_card second_row">
@@ -839,19 +818,49 @@
             </div>
             <div class="card_content">
               <P>
-                Nous offrons un package riche et diversifié qui va au-delà du salaire fixe : des primes de performance, de langue et de parrainage ainsi que des cadeaux et des récompenses gagnés lors des challenges de performance.
-                </P>
+                Vous aurez accès à un package riche et diversifié qui va au-delà du salaire fixe : des primes de performance, de langue et de parrainage ainsi que des cadeaux et des récompenses gagnées lors des challenges de performance. 
+             </P>
             </div>
           </div>
         </div>
+
+        <div class="prt4_card first_row">
+            <div class="prt4_main_content">
+              <div class="card_header">
+                <div class="card_title">
+                  <P>Santé mentale</P>
+                </div>
+                <div class="card_icon">
+                  <svg class="prt4_svg" width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1396_3520)">
+                    <path d="M77 41.7083C77 44.8204 74.7542 48.125 70.5833 48.125H69.5246L68.8187 53.4508C67.76 61.4075 60.9262 67.375 52.9054 67.375H51.3333C51.3333 72.6687 47.0021 77 41.7083 77H19.25C13.9562 77 9.62499 72.6687 9.62499 67.375V64.2629C9.62499 61.3754 8.79082 58.7125 7.25082 56.6912C1.86082 49.665 -0.641677 40.9062 0.160406 32.0192C1.60416 15.8812 14.3092 2.53458 30.3187 0.352909C43.2804 -1.44376 55.6967 3.75374 63.525 14.1808C67.5996 19.2179 77 37.1525 77 41.7083ZM70.5833 41.7083C70.1983 38.8208 62.6587 23.2925 58.4558 18.1271C52.8092 10.6196 44.4033 6.41666 35.2917 6.41666C33.9442 6.41666 32.5646 6.51291 31.185 6.70541C18.095 8.50208 7.73207 19.4104 6.51291 32.5967C5.83916 39.8796 7.92457 47.0342 12.32 52.8092C14.6942 55.9212 16.0096 59.9958 16.0096 64.2629V67.375C16.0096 69.1396 17.4533 70.5833 19.2179 70.5833H41.6762C43.4408 70.5833 44.8846 69.1396 44.8846 67.375V64.1667C44.8846 62.4021 46.3283 60.9583 48.0929 60.9583H52.8733C57.6858 60.9583 61.7925 57.365 62.4021 52.5846L63.4608 44.4996C63.6854 42.8954 65.0329 41.7083 66.6371 41.7083H70.4871H70.5833Z" fill="#044123"/>
+                    <path d="M45.4583 35.0417C47.2229 35.0417 48.6667 33.5979 48.6667 31.8333C48.6667 30.0687 47.2229 28.625 45.4583 28.625H39.0417V22.2083C39.0417 20.4437 37.5979 19 35.8333 19C34.0688 19 32.625 20.4437 32.625 22.2083V28.625H26.2083C24.4438 28.625 23 30.0687 23 31.8333C23 33.5979 24.4438 35.0417 26.2083 35.0417H32.625V41.4583C32.625 43.2229 34.0688 44.6667 35.8333 44.6667C37.5979 44.6667 39.0417 43.2229 39.0417 41.4583V35.0417H45.4583Z" fill="#03B585"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1396_3520">
+                    <rect width="77" height="77" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                </div>
+              </div>
+              <div class="card_content">
+                <P>
+                    Nous nous soucions de votre santé mentale et celle de vos proches et nous mettons à votre disposition des ressources professionnelles pour vous accompagner dans les moments difficiles. 
+                </P>
+              </div>
+            </div>
+          </div>
     
     
         <div class="prt4_card second_row">
           <div class="prt4_main_content">
             <div class="card_header">
               <div class="card_title">
-                <P>Croissance et
-                  reconnaissance</P>
+                <P>Formation et
+                    développement
+                    </P>
               </div>
               <div class="card_icon">
                 <svg  class="prt4_svg" width="78" height="75" viewBox="0 0 78 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -864,8 +873,8 @@
             </div>
             <div class="card_content">
               <P>
-                Nos programmes de formation vous permettant d'acquérir de nouvelles compétences et de progresser dans votre carrière. En parallèle, nos programmes de reconnaissance visent à célébrer vos accomplissements exceptionnels et à mettre en lumière vos contributions.
-              </P>
+                Notre écosystème d'apprentissage vous permettra d'acquérir de nouvelles compétences et de progresser dans votre carrière, grâce à une variété de ressources pédagogiques et des programmes de formation personnalisés.
+                  </P>
             </div>
           </div>
         </div>
@@ -912,40 +921,13 @@
                             </div>
                             <div class="qt_content_holder">
                                 <p class="qt_content">
-                                    Pour postuler, veuillez remplir le formulaire suivant : Rejoignez notre
-                                    communauté de talents | Carrières Cnexia
+                                    Pour postuler, veuillez remplir le formulaire suivant :<a href="https://www.cnexia.com/jointalentcommunity?applyType=JTC" style="text-decoration: none; color: #0ACB97;"> Rejoignez notre
+                                        communauté de talents | Carrières Cnexia</a> 
                                 </p>
                             </div>
                         </div>
 
 
-                        <div class="qt_header_and_content" >
-                            <div class="qt_container"  onclick="toggleContentHolder(this)">
-                                <div class="qt_icone">
-                                    <div class="cnexia_arrow">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
-                                        </svg>                                        
-                                    </div>
-                                        
-                                </div>
-                                <div class="qt_question">
-                                    <p>
-                                        Quels sont vos horaires ?
-                                    </p>
-                                </div>
-                                <div class="qt_nav_icon">
-                                    <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="qt_content_holder">
-                                <p class="qt_content">
-                                    Nous assurons des shifts de nuit.
-                                </p>
-                            </div>
-                        </div>
 
 
                         <div class="qt_header_and_content" >
@@ -1039,36 +1021,7 @@
 
 
 
-                        <div class="qt_header_and_content" >
-                            <div class="qt_container"  onclick="toggleContentHolder(this)">
-                                <div class="qt_icone">
-                                    <div class="cnexia_arrow">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
-                                        </svg>                                        
-                                    </div>
-                                        
-                                </div>
-                                <div class="qt_question">
-                                    <p>
-                                        Je suis étudiant en technologie de l’information et je souhaite mener
-                                        mon stage au sein de votre organisation, que dois-je faire ?    
-                                    </p>
-                                </div>
-                                <div class="qt_nav_icon">
-                                    <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="qt_content_holder">
-                                <p class="qt_content">
-                                    Pour toute demande de stage, veuillez adresser votre candidature via :
-                                    recrutement-tech@cnexia.com en précisant au sujet
-                                    du mail : Demande de stage en tech.
-                                </p>
-                            </div>
-                        </div>
+                        
 
                         <div class="qt_header_and_content" >
                             <div class="qt_container"  onclick="toggleContentHolder(this)">
