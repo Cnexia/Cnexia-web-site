@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
           {
             imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/fsdsdfsvxcvzsg-16502948787961-1698658708676.jpg",
           },
+          {
+            imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/MicrosoftTeams-image105-1701691875745.jpg",
+          },
+          {
+            imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/MicrosoftTeams-image104-1701691877961.jpg",
+          },
+
       // Add more images as needed
     ];
 

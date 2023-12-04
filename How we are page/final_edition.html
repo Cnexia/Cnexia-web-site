@@ -533,7 +533,12 @@ a.banner_btn {
     color: #FFF;
     margin: auto;
 }
-
+.banner_btn_arrow {
+    display: flex;
+}
+.Green{
+    top: 50%;
+}
 /* Hovring on the btn  */
         
 .btn_info:hover
@@ -618,6 +623,14 @@ a.banner_btn {
 }
 
 /* -----------------> Working on the responsitivity <--------------- */
+
+@media (max-width: 1500px){
+    .hwa_banner{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: auto;
+    }
+}
 @media (max-width: 1500px){
     .banner_img{
         left: 30%;
@@ -962,6 +975,10 @@ a.banner_btn {
 /* ----------------------> the break point for all phones <--------------------------- */
 
 @media (max-width: 450px){
+
+    .hwa_banner{
+        margin: 0 auto ;
+    }
     .part4{
         margin-top: 2rem;
     }
@@ -1106,6 +1123,9 @@ a.banner_btn {
         margin-right: 10%;
         margin-left: 10%;
     }
+    .prt4_right{
+        background-position: left center;
+    }
     
     .prt6_main{
         margin-right: 10%;
@@ -1148,6 +1168,29 @@ a.banner_btn {
     }
 
     
+}
+
+@media (max-width: 350px){
+    .banner_img{
+        max-width: 17rem;
+        max-height: auto;
+        width: 100%;
+        height: 100%;
+        margin-top:20%;
+        left: 11%;
+    }
+    .text_right{
+    font-size: 1.2rem;
+    left: 65%;
+    top: 23%;
+    max-width: 9rem;
+    }
+    .text_left{
+        font-size: 1.3rem;
+        left: 6%;
+        top: 12%;
+        max-width: 9rem;
+    }
 }
 
 
