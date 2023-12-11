@@ -78,13 +78,15 @@
             margin-left: 5%;
             margin-top: 3%;
             width: 40%;
+            transition: transform 0.3s ease-in-out;
+
         }
         .prt1_right{
             background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/MicrosoftTeams-image102-1700505871821.png");
             width: 70%;
             height: 37.8125rem;
             display: flex;
-            background-size: cover; /* Scale the background image to cover the container */
+            background-size: contain; /* Scale the background image to cover the container */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
             background-position: bottom right; /* Center the background image */
             top: 0;
@@ -500,8 +502,8 @@
         @media (max-width: 99rem){
             .part1{
                 
-                margin-left: 2rem;
-                margin-right: 2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
                 width: auto;
             }
 
@@ -510,8 +512,37 @@
 
 
         @media (max-width: 1200px){
+            .prt1_left{
+                font-size: 3.5rem;
+            }
             .prt5_right{
                 display: none;
+            }
+
+            .prt2_content{
+            margin-right: 5%;
+            margin-left: 5%;
+            }
+
+            .prt3_container{
+            display: flex;
+            flex-direction: column-reverse;
+            width: 80%;
+            gap: 1rem;
+            margin-right: 5%;
+            margin-left: 5%;
+            }
+            .prt3_title{
+            width: auto;
+            margin-right: 5%;
+            margin-left: 5%;
+            
+            }
+            .prt3_img{
+            background-size: contain;
+            }
+            .part5{
+                width: auto;
             }
 
 
@@ -1047,35 +1078,7 @@
 
                         
 
-                        <div class="qt_header_and_content" >
-                            <div class="qt_container"  onclick="toggleContentHolder(this)">
-                                <div class="qt_icone">
-                                    <div class="cnexia_arrow">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
-                                        </svg>                                        
-                                    </div>
-                                        
-                                </div>
-                                <div class="qt_question">
-                                    <p>
-                                        Acceptez-vous les candidatures des personnes de nationalité sénégalaise ?  
-                                    </p>
-                                </div>
-                                <div class="qt_nav_icon">
-                                    <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="qt_content_holder">
-                                <p class="qt_content">
-                                    Oui, nous acceptons les candidatures des individus de nationalité
-                                    sénégalaise en possession d'une carte de séjour valide.
-                                </p>
-                            </div>
-                        </div>
-
+                       
                         <div class="qt_header_and_content" >
                             <div class="qt_container"  onclick="toggleContentHolder(this)">
                                 <div class="qt_icone">

@@ -61,7 +61,7 @@ text-decoration: none;
     position: relative;
     overflow: hidden;
     border-radius: 2rem;
-    margin-top: .7rem; 
+    
 
     perspective: 1000px;
     transition: transform 0.5s ease;
@@ -103,6 +103,7 @@ text-decoration: none;
     top: 6%;
     
 }
+
 .text_right{
     color: #FFF;
     font-family: 'GTAmerica-Bold';
@@ -146,9 +147,9 @@ text-decoration: none;
 
 /* the paralex effect just added */
 
-.hwa_banner:hover {
+/* .hwa_banner:hover {
     transform: perspective(1000px) rotateX(3deg); /* Adjust the rotation values for the 3D effect */
-}
+/* }
 
 .banner_bcg,
 .banner_svg,
@@ -158,8 +159,8 @@ text-decoration: none;
 .text_left,
 .banner_img {
     transform-style: preserve-3d; /* Maintain 3D perspective on child elements */
-    transform: translateZ(1px); /* Add a minimal depth to child elements */
-}
+    /* transform: translateZ(1px); /* Add a minimal depth to child elements */
+
 
 /* ------------------- en savoire pls sur cnexia ---------------- */
 
@@ -519,7 +520,7 @@ a.banner_btn {
 }
 
 .banner_btn {
-    width: 10.62rem;
+    width: 13rem;
     height: 2.6rem;
     border-radius: 4.77838rem;
     padding: 0.51456rem 0.95569rem 0.51456rem 1.02919rem;
@@ -624,11 +625,16 @@ a.banner_btn {
 
 /* -----------------> Working on the responsitivity <--------------- */
 
-@media (max-width: 1500px){
+@media (max-width: 100rem){
     .hwa_banner{
         margin-left: 1rem;
         margin-right: 1rem;
         width: auto;
+    }
+}
+@media (max-width: 1550px){
+    .banner_img{
+        left: 33%;
     }
 }
 @media (max-width: 1500px){
@@ -874,6 +880,33 @@ a.banner_btn {
 
     
 }
+@media (max-width: 775px){
+    
+    .banner_img{
+        
+        margin-top: 17%;
+        
+    }
+    .text_right{
+    font-size: 2rem;
+    left: 65%;
+    top: 32%;
+    max-width: 9rem;
+    }
+    .text_left{
+        font-size: 2.2rem;
+        left: 4%;
+        top: 15%;
+        max-width: 9rem;
+    }
+    .hero{
+        top: 3%;
+    left: 85%;
+    
+    
+    }
+
+}
 
 @media (max-width: 700px){
     .hwa_banner{
@@ -908,6 +941,38 @@ a.banner_btn {
 
 }
 
+@media (max-width: 650px){
+    .hwa_banner{
+        height: 25rem;
+    }
+    .banner_img{
+        max-width: 18rem;
+        max-height: 19rem;
+        width: 100%;
+        height: 100%;
+        margin-top:20%;
+        left: 20%;
+    }
+    .text_right{
+    font-size: 1.7rem;
+    left: 62%;
+    top: 26%;
+    max-width: 9rem;
+    }
+    .text_left{
+        font-size: 2rem;
+        left: 4%;
+        top: 15%;
+        max-width: 9rem;
+    }
+    .hero{
+    
+    left: 83%;
+    
+    
+    }
+}
+
 @media (max-width: 600px){
     .hwa_banner{
         height: 25rem;
@@ -940,41 +1005,11 @@ a.banner_btn {
     }
 }
 
-@media (max-width: 500px){
-    .hwa_banner{
-        height: 25rem;
-    }
-    .banner_img{
-        max-width: 18rem;
-        max-height: 19rem;
-        width: 100%;
-        height: 100%;
-        margin-top:20%;
-        left: 20%;
-    }
-    .text_right{
-    font-size: 1.7rem;
-    left: 62%;
-    top: 26%;
-    max-width: 9rem;
-    }
-    .text_left{
-        font-size: 2rem;
-        left: 4%;
-        top: 15%;
-        max-width: 9rem;
-    }
-    .hero{
-    
-    left: 82%;
-    
-    
-    }
-}
+
 
 /* ----------------------> the break point for all phones <--------------------------- */
 
-@media (max-width: 450px){
+@media (max-width: 500px){
 
     .hwa_banner{
         margin: 0 auto ;
@@ -1131,6 +1166,12 @@ a.banner_btn {
         margin-right: 10%;
         margin-left: 10%;
     }
+    .banner_btn{
+        width: 11rem;
+    }
+    .banner_btn_text{
+        font-size: .8rem;
+    }
 
 }
 
@@ -1168,6 +1209,28 @@ a.banner_btn {
     }
 
     
+}
+@media (max-width: 380px){
+    .banner_img{
+        max-width: 17rem;
+        max-height: auto;
+        width: 100%;
+        height: 100%;
+        margin-top:20%;
+        left: 11%;
+    }
+    .text_right{
+    font-size: 1.2rem;
+    left: 65%;
+    top: 23%;
+    max-width: 9rem;
+    }
+    .text_left{
+        font-size: 1.3rem;
+        left: 6%;
+        top: 12%;
+        max-width: 9rem;
+    }
 }
 
 @media (max-width: 350px){
@@ -1821,7 +1884,7 @@ a.banner_btn {
                 </div>
                 <div class="prt6_btn">
                     <a href="https://www.cnexia.com/jointalentcommunity?applyType=JTC" class="btn_info N2" style="text-decoration: none;"> <div class="banner_btn Green">
-                        <div class="banner_btn_text Green"><p>Rejoignez-nous</p></div>
+                        <div class="banner_btn_text Green"><p>Postulez maintenant</p></div>
                         <div class="banner_btn_arrow ">
                             <svg class="Green" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="btn_arrow green" d="M1.93169 15.8568L7.15663 9.76105C7.53418 9.32057 7.53418 8.67059 7.15663 8.23011L1.93169 2.13435" stroke="#FFFFFF" stroke-width="2.35242" stroke-linecap="round"/>

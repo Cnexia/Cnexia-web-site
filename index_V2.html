@@ -196,6 +196,9 @@
             grid-gap: .5rem;
             transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, stroke 0.3s ease;
         }
+        .banner_btn.N2{
+            width: 13rem;
+        }
 
 
 
@@ -887,7 +890,13 @@
         }
 
 /* -------------------------> Responsitivity <---------------------------------- */
-        
+        @media (max-width: 99rem){
+            .home_banner{
+                margin-left: 1rem;
+                margin-right: 1rem;
+                width: auto;
+            }
+        }
         /* Media query for screens with a width between 1000 and 1200 pixels */
         @media (min-width: 1000px) and (max-width: 1200px) {
           .banner_line{
@@ -1172,6 +1181,10 @@
             transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, stroke 0.3s ease;
 
         }
+        .banner_btn.N2{
+            width: 11rem;
+        }
+        
         .banner_btn_text{
             font-size: .7rem;
         }
@@ -1191,7 +1204,10 @@
             grid-gap: 2rem;
         }
         
+    
+        
         .home_banner{
+            margin: 0 auto;
             border-radius: .3rem;
         }
         .banner_bcg{
@@ -1490,8 +1506,8 @@
                 Vous découvrirez constamment de nouveaux projets pour susciter votre intérêt et vous stimuler.
             </p>
         </div>
-        <a href="https://www.cnexia.com/jointalentcommunity?applyType=JTC" class="btn_info N2"> <div class="banner_btn Green">
-            <div class="banner_btn_text Green"><p>Rejoignez-nous</p></div>
+        <a href="https://www.cnexia.com/jointalentcommunity?applyType=JTC" class="btn_info N2"> <div class="banner_btn Green N2">
+            <div class="banner_btn_text Green"><p>Postulez maintenant</p></div>
             <div class="banner_btn_arrow ">
                 <svg class="Green" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="btn_arrow green" d="M1.93169 15.8568L7.15663 9.76105C7.53418 9.32057 7.53418 8.67059 7.15663 8.23011L1.93169 2.13435" stroke="#FFFFFF" stroke-width="2.35242" stroke-linecap="round"/>
