@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isAllAnimationsComplete) {
             // All animations have ended, change innerHTML
-            document.querySelector('#number1').innerHTML = '<span>2</span><span style="color: #03B585;">K</span>';
+            document.querySelector('#number1').innerHTML = '<span>3</span><span style="color: #03B585;">K</span>';
         }
     }
 
