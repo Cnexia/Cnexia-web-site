@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const testimonials = [
         {
             imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/Achraf_final_pic-1696417930252.png",
-            text: "J’ai intégré Cnexia en 2019 en tant que Responsable Formation, j'ai eu pour mission de bâtir une équipe passionnée et de créer des programmes sur mesure pour le développement de nos talents. Aujourd'hui, en tant que Directeur des Opérations, je relève chaque jour de nouveaux défis, en pilotant nos équipes avec rigueur et en continuant à innover pour optimiser nos processus et atteindre de nouveaux sommets.",
+            text: "J'ai rejoint Cnexia en 2019 comme Responsable Formation, avec pour mission de constituer une équipe passionnée et de développer des programmes sur mesure pour nos talents. Aujourd'hui, en tant que Directeur des Opérations, je pilote les équipes avec rigueur et innovation, tout en optimisant les processus pour relever de nouveaux défis.",
             name: "Achraf T",
             role: "Directeur des Opérations",
         },
