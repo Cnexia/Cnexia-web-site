@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     // {
     //     imageSrc: "https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/Wassel_final_pic-1696417979047.png",
-    //     text: "Mon aventure chez Cnexia a débuté en 2019 en tant que conseiller client. Ensuite j'ai occupé le poste de «Quality Analyst», qui m'a permis d'être rapidement promu «Team Manager». Actuellement j'occupe le poste «Compensation Analyst», qui est une nouvelle aventure pour moi, et je suis enthousiaste à l'idée de contribuer à la croissance de notre société.",
+    //     text: "Mon aventure chez Cnexia a débuté en 2019 en tant que conseiller client. Ensuite j’ai occupé le poste de «Quality Analyst», qui m’a permis d’être rapidement promu «Team Manager». Actuellement j’occupe le poste «Compensation Analyst», qui est une nouvelle aventure pour moi, et je suis enthousiaste à l'idée de contribuer à la croissance de notre société.",
     //     name: "Wassel E",
     //     role: "Compensation Analyst",
     // },
+    // Add more testimonials as needed
   ];
 
   let currentTestimonialIndex = 0;
@@ -38,16 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update the content inside .test_content
         testContentElement.innerHTML = `
-          <div class="test_text">
-            <p>${testimonial.text}</p>
-          </div>
-          <div class="test_nomination">
-            <p>
-              <span>${testimonial.name}</span><br>
-              <span style="color: #03B585; font-weight: 400">${testimonial.role}</span>
-            </p>
-          </div>
-        `;
+                <div class="test_text">
+                    <p>${testimonial.text}</p>
+                </div>
+                <div class="test_nomination">
+                    <p>
+                        <span>${testimonial.name}</span><br>
+                        <span style="color: #03B585; font-weight: 400">${testimonial.role}</span>
+                    </p>
+                </div>
+            `;
 
         // Fade in the elements
         testImagesElement.style.opacity = 1;
