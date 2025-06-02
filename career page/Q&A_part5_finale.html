@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cnexia career</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FAFFFE;
+            font-family: Arial, sans-serif;
+            max-width: 1920px;
+            margin: auto;
+        }
+
+        /* Q&A part5 styles */
+        .part5 {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #FAFFFE;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .prt5_title {
+            color: #044123;
+            font-family: Montserrat, sans-serif;
+            font-size: 3.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .prt5_content {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .prt5_left {
+            max-width: 60rem;
+            width: 100%;
+        }
+
+        .question_holder {
+            display: grid;
+            grid-gap: 1rem;
+        }
+
+        .qt_header_and_content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-radius: 0.5rem;
+            background-color: #044123;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qt_container {
+            max-width: 55.7rem;
+            width: auto;
+            padding: 0.5625rem 2.875rem 0.5rem 1.375rem;
+            align-items: center;
+            display: grid;
+            grid-template-columns:  10% 85% 5%;
+            
+        }
+
+        .qt_question {
+            color: #FFF;
+            font-family: Montserrat, sans-serif;
+            font-size: 1.3125rem;
+            font-weight: 400;
+        }
+
+        .qt_nav_icon {
+            margin: auto;
+            display: block;
+            
+        }
+        .qt_icone{
+            width: 2.6875rem;
+            height: 2.6875rem;
+            background-color:#105a35;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            border-radius: 50%;
+        }
+        .cnexia_arrow{
+            position: absolute;   
+            z-index: 2; 
+            height: 22px;
+            width: 22px;
+        }
+     
+        .nav_arrow {
+            margin-top: 5px;
+            transform: rotate(-180deg);
+            transition: transform 0.2s ease-in-out;
+        }
+        .qt_content_holder{
+            background-color: #CCDCC8;
+            border-radius: 3rem 0 0 0;
+            margin-left: 5%;
+            display: flex;
+            left: 10%;
+            height: fit-content;
+            display: none;
+        }
+
+        .qt_content {
+            margin: 3%;
+            color: #044123;
+            width: 85%;
+            font-family: Montserrat;
+            font-size: 1.3125rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+
+        .nav_arrow.active {
+            transform: rotate(0deg);
+        }
+
+       
+
+        .prt5_right {
+            flex: 1;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            grid-gap: .5rem;
+        }
+        .icon_right{
+            width: 12.25rem;
+            height: 19.4375rem; 
+        }
+
+        .line1, .line2 {
+            width: 100%;
+            
+            stroke: rgba(3, 181, 133, 0.00);
+            height: auto;
+            margin-left: 39%;
+            margin-right: 50%;
+        }
+
+        
+
+        
+    .qt_header_and_content .qt_container {
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .qt_content_holder {
+    display: none; /* Hide the content holder by default */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add a transition for smooth opacity changes */
+    }
+
+    .qt_content_holder.active {
+        display: block; /* Show the content holder when the "active" class is applied */
+        opacity: 1;
+    }
+
+   
+    
+    
+
+    </style>
+</head>
+<body>
+    <div class="part5">
+        <div class="prt5_title">
+            <p>
+                Nous répondons à vos questions avant que vous les formuliez. 
+            </p>
+        </div>
+        <div class="prt5_content">
+            <div class="prt5_left">
+                <div class="question_holder">
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je souhaite rejoindre vos équipes de la relation client, comment faire ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Pour postuler, veuillez remplir le formulaire suivant : Rejoignez notre
+                                communauté de talents | Carrières Cnexia
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Quels sont vos horaires ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Nous assurons des shifts de nuit.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Est-ce qu’il y’a une possibilité de télétravail ?                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Oui, vous pouvez passer au télétravail après 3 mois de production,
+                                conditionné par certains critères.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Est-ce que le transport est assuré ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Oui, le transport est assuré en navette pour les villes suivantes :
+                                Rabat, Kénitra, Fès et Séfrou.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Quelle est la politique de Cnexia en matière de diversité ? 
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Nous valorisons la diversité au sein de notre organisation.
+                                Notre réussite repose sur la transparence, la curiosité, l’inclusion
+                                et le partage.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Je suis étudiant en technologie de l’information et je souhaite mener
+                                    mon stage au sein de votre organisation, que dois-je faire ?    
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Pour toute demande de stage, veuillez adresser votre candidature via :
+                                recrutement-tech@cnexia.com en précisant au sujet
+                                du mail : Demande de stage en tech.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    Acceptez-vous les candidatures des personnes de nationalité sénégalaise ?  
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Oui, nous acceptons les candidatures des individus de nationalité
+                                sénégalaise en possession d'une carte de séjour valide.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="qt_header_and_content" >
+                        <div class="qt_container"  onclick="toggleContentHolder(this)">
+                            <div class="qt_icone">
+                                <div class="cnexia_arrow">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8.04122L8.0258 0H17.0518C19.2668 0 21.0639 1.81278 21.0639 4.05022V13.1618L13.0382 21.2651V10.5546C13.0382 9.16067 11.9149 8.034 10.5341 8.04267H0V8.04122Z" fill="white"/>
+                                    </svg>                                        
+                                </div>
+                                    
+                            </div>
+                            <div class="qt_question">
+                                <p>
+                                    J'ai précédemment échoué le quiz de présélection, puis-je soumettre
+                                    une nouvelle candidature ?
+                                </p>
+                            </div>
+                            <div class="qt_nav_icon">
+                                <svg class="nav_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L11.2191 14.3306C11.6684 14.7158 12.3316 14.7158 12.7809 14.3306L19 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="qt_content_holder">
+                            <p class="qt_content">
+                                Oui, vous avez la possibilité de repasser le quiz après un délai d’un an.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+                    
+                 
+                                
+
+
+                   
+                </div>
+            </div>
+            <div class="prt5_right">
+                <div class="line1">
+                    
+                    <svg width="30" height="204" viewBox="0 0 30 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 0L15 204" stroke="url(#paint0_linear_1639_1756)" stroke-width="29.9525"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1639_1756" x1="15.5" y1="2.18557e-08" x2="15.5" y2="204" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#03B585" stop-opacity="0"/>
+                        <stop offset="1" stop-color="#03B585"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+                </div>
+                <div class="icon_right">
+                    <svg width="185" height="307" viewBox="0 0 185 307" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M72.1922 229.559V212.072C72.1922 198.332 73.0249 180.013 95.9242 158.779L116.325 139.627C130.481 126.304 145.054 109.65 145.054 83.4197C145.054 52.6097 122.987 32.6249 93.0097 32.6249C60.5344 32.6249 37.6351 54.2751 37.6351 92.5794C37.6351 98.4083 37.6351 102.988 40.1332 114.646L2.24526 110.066C0.163507 99.241 0.163507 92.163 0.163507 87.5832C0.163507 36.7884 31.3898 0.149508 93.0097 0.149508C149.633 0.149508 184.607 30.1268 184.607 83.4197C184.607 112.981 165.038 137.962 145.47 156.281L124.652 175.85C112.162 187.507 107.582 197.916 107.582 217.901V229.559H72.1922ZM68.445 307V262.867H112.162V307H68.445Z" fill="#03B585"/>
+                        </svg>
+                        
+                </div>
+                <div class="line2">
+                   
+                    <svg width="30" height="204" viewBox="0 0 30 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 204L15 3.93391e-06" stroke="url(#paint0_linear_1748_947)" stroke-width="29.9525"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1748_947" x1="14.5" y1="204" x2="14.5" y2="-2.18557e-08" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#03B585" stop-opacity="0"/>
+                        <stop offset="1" stop-color="#03B585"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+                    function toggleContentHolder(container) {
+                // Get the qt_content_holder within the clicked container
+                var contentHolder = container.nextElementSibling;
+
+                // Get the arrow within the clicked container
+                var arrow = container.querySelector('.nav_arrow');
+
+                // Hide all content holders and deactivate all arrows
+                hideAllContentHolders();
+                deactivateAllArrows();
+
+                // Toggle the "active" class for the clicked content holder and arrow
+                contentHolder.classList.toggle('active');
+                arrow.classList.toggle('active');
+            }
+
+            function hideAllContentHolders() {
+                // Get all elements with class "qt_content_holder" and remove the "active" class
+                var allContentHolders = document.querySelectorAll('.qt_content_holder');
+                allContentHolders.forEach(function (contentHolder) {
+                    contentHolder.classList.remove('active');
+                });
+            }
+
+            function deactivateAllArrows() {
+                // Get all elements with class "nav_arrow" and remove the "active" class
+                var allArrows = document.querySelectorAll('.nav_arrow');
+                allArrows.forEach(function (arrow) {
+                    arrow.classList.remove('active');
+                });
+            }
+
+
+
+
+    </script>
+
+</body>
+</html>

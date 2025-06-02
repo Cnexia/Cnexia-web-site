@@ -1,0 +1,194 @@
+.home_prt6 {
+    margin-top: 2rem;
+    max-width: 75rem;
+    width: 100%; /* Add this to make it responsive */
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: .8rem;
+    text-align: center;
+}
+
+.prt6_title {
+    color: #044123;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+}
+
+.prt6_cards_container {
+    display: grid;
+    max-width: 75rem;
+    height: auto;
+    width: 100%; 
+    
+    grid-template-columns:auto auto auto;
+    grid-gap: 1rem;
+    overflow: hidden;
+}
+
+.prt6_card {
+    width: 22.59481rem; /* Change this to make it responsive */
+    
+    height: 27.3rem; /* Change to auto to maintain aspect ratio */
+    border-radius: 0.9375rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.prt6_card_bcg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.prt6_card:hover .prt6_card_bcg {
+    transform: scale(1.1);
+}
+
+.prt6_card_bcg.N1 {
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/3raisons-for-joun-us-picN1-1696417927740.png");
+}
+
+.prt6_card_bcg.N2 {
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/dlsksldk-1697472408964.png");
+    background-position: 80% 0%;
+}
+
+.prt6_card_bcg.N3 {
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/Rectangle93-1696346788411.jpg");
+}
+
+.prt6_card_gradient {
+    width: 100%;
+    height: 100%;
+    background: rgb(3, 181, 133);
+    background: linear-gradient(0deg, rgba(3, 181, 133, 1) 20%, rgba(3, 181, 133, 0) 50%);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.prt6_card_content {
+    color: #fff;
+    text-align: center;
+    font-family: 'GTAmerica-Medium';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20rem;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+}
+.navigation-btns {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    
+    grid-gap: .5rem;
+    
+    
+}
+
+/* .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.dot.active{
+    background-color: #00966C;
+    scale: 1.3;
+}
+.prt6_card.active {
+    transform: translateX(0); /* Apply the translation to the active card 
+}
+
+
+.prt6_card.inactive {
+    transform: translateX(100%); /* Move the inactive card off the screen 
+} */
+
+.nav_left_btn {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem 0rem;
+    border: 0.5px solid #00966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+.nav_right_btn {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0rem 0.5rem;
+    border: 0.5px solid #00966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+/* Change background color on hover */
+.nav_left_btn:hover, .nav_right_btn:hover {
+    background-color: #00966C;
+    transform: scale(1.2); /* Slightly scale up on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Change arrow color on hover */
+ #nav_svg {
+    stroke: #747474;
+}
+.nav_left_btn:hover #nav_svg, .nav_right_btn:hover #nav_svg{
+    stroke: white;
+}
+
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .navigation-dots{
+        display: block;
+    }
+    .prt6_card {
+        max-width: 100%; /* Adjust for smaller screens */
+    }
+    .prt6_cards_container{
+        width: 100%;
+        height: auto;
+        
+        display: flex;
+        
+    }
+    .prt6_card{
+        width: 100%;
+        flex-basis: 100%;
+        display: none;
+    }
+    .prt6_card.active {
+        display: block;
+    }
+}

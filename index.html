@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family='Montserrat', sans-serif' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family='Montserrat', sans-serif:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family='Montserrat', sans-serif:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family='Montserrat', sans-serif:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="" class="btn btn-"></a>
+    
+    <style>
+        /* ------------------- Globale Iputes ---------------- */
+        p{
+            margin: 0;
+        }
+
+        *{
+            padding: 0;
+            margin: auto;
+            max-width: 1920px;
+            
+        }
+        .inner-container.ph-fluid-container, .container.ph-fluid-container {
+
+            padding-top: 0;
+        }
+
+                
+        a:link {
+        text-decoration: none;
+        }
+
+        a:visited {
+        text-decoration: none;
+        }
+        .ph-page {
+            margin-top: 100px;
+        }
+
+
+
+
+        /* ------------------- Home banner ---------------- */
+        .home_banner{
+
+            max-width: 99rem;
+            height: 36rem;
+            flex-shrink: 0;
+            width: 100%;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin-top: .7rem;
+
+        }
+        .banner_bcg{
+            width: 100%;
+            height: 100%;
+            background-size: cover; /* Scale the background image to cover the container */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-position: center; /* Center the background image */
+            position: relative;
+            border-radius: 2rem;
+            z-index: 1;
+
+
+
+            
+            animation: fadeInOut 4s ease-out infinite;
+            
+        }
+
+
+        @keyframes fadeInOut {
+            0%, 80% {
+                transform: scale(1.3);
+                
+            }
+            50%, 70% {
+                opacity: 0.7;  
+            }
+            70%, 80% {
+                opacity: 0.5;  
+            }
+            80%, 100% {
+                opacity: 0;
+                transform: scale(1.9);  
+            }
+            
+
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes zoomFade {
+            0% {
+                transform: scale(1);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        .banner_gradient{
+            background: linear-gradient(91deg, #044123 2.18%, rgba(4, 65, 35, 0.00) 99.51%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            border-radius: 2rem;
+            z-index: 2;
+
+        }
+        .banner_line{
+            position: absolute;
+            bottom: -48%;
+            left: 7%;
+            border-radius: 2rem;
+            z-index: 3;
+            
+        }
+
+        .baner_content{
+            position: absolute;
+            z-index: 4;
+            display: grid;
+            grid-template-rows: auto;
+            top: 17%;
+            left: 12% ;
+            text-align: left;
+            grid-gap: 1rem;
+            
+            
+
+        }
+        .banner_title{
+            color: #FFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 8.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 98.4%; /* 8.4425rem */
+            max-width: 53rem;
+            margin-right: 10%;
+            
+        }
+
+        .banner_text{
+            color: #FFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.47025rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            max-width: 58.81056rem;
+        }
+        a.btn_info.N1 {
+            margin-right: 100%;
+        }
+        .banner_btn{
+            width: 10.62rem;
+            height: 2.6rem;
+            border-radius: 4.77838rem;
+            
+            padding: 0.51456rem 0.95569rem 0.51456rem 1.02919rem;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: .5rem;
+            
+            margin-top: 3%;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, stroke 0.3s ease;
+
+        }
+        .banner_btn.white{
+            background: #FFF;
+        }
+        .banner_btn.Green{
+            background: #03B585;
+            margin: auto;
+        }
+        /* .btn_info{
+            animation:fade 0.1s ease-in-out;
+        } */
+
+        /* Hovring on the btn  */
+        
+        .btn_info:hover
+        .banner_btn.Green{
+            background-color:#f6f6f6;
+            box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+            -webkit-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+            -moz-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+        }
+        .btn_info:hover
+        .banner_btn_text.Green {
+            color:#03B585;
+        }
+
+        .btn_info:hover
+        .btn_arrow.green{
+            stroke:#03B585;
+        }
+
+        .btn_info:hover
+        .banner_btn.white{
+            background-color:#03B585;
+            box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+            -webkit-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+            -moz-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+        }
+        .btn_info:hover
+        .banner_btn_text.white {
+            color:#ffffff;
+        }
+
+        .btn_info:hover
+        .btn_arrow.white{
+            stroke:#ffffff;
+        }
+
+
+
+        .banner_btn_text{
+            color: #03B585;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .85rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .banner_btn_text.Green{
+            color: #FFFFFF;
+        }
+        .banner_btn_arrow{
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            
+        }
+        
+
+
+
+
+
+
+
+        .home_prt2{
+            margin-top: 2rem;
+            max-width: 1200px;
+        }
+
+        .prt2_title{
+            color: #044123;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .prt2_text{
+
+            margin-top: 1rem;    
+
+            color: #044123;
+            text-align: center;
+            font-family: 'GTAmerica-Regular';
+            font-size: 1.60563rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 1rem;
+        }
+
+
+
+
+
+        .home_prt3{
+            margin-top: 2rem;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+            grid-gap: 4.3rem;
+        }
+
+        .prt3_card{
+            display: grid;
+            grid-template-rows: auto 1fr 1fr;
+            grid-gap: .5rem;
+            
+        }
+        .card_icon{
+            max-width: 75rem;
+            max-height: 30.52188rem;
+            background-size: cover; /* Scale the background image to cover the container */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-position: center; /* Center the background image */
+            
+        }
+        .card_icon.N1{
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/wired-outline-268-avatar-man-1696334364564.gif");
+        }
+        .card_icon.N2{
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/wired-outline-1121-iota-internet-of-things-2-1696334367586.gif");
+        }
+        .card_icon.N3{
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/wired-outline-187-suitcase-1696334361813.gif");
+        }  
+        
+        .card_icon.N4{
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/wired-outline-1713-downtown-1696334370203.gif");
+        } 
+
+        .card_nbr{
+            color: #044123;
+            text-align: center;
+            font-family: 'GTAmerica-Bold';
+            font-size: 3.8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .cart_txt{
+            color: #03B585;
+            text-align: center;
+            font-family: 'GTAmerica-Bold';
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+
+
+
+
+
+/* ------------------------------> PART4 <------------------------------------ */
+        .home_prt4{
+            margin-top: 2rem;
+            max-width: 75rem;
+            display: grid;
+            grid-template-rows: auto ;
+            grid-gap: 2rem;
+            width: 100%;
+        }
+        .prt4_title{
+            color: #044123;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .prt4_cards_container{
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 2rem;
+            max-width: 75rem;
+            width: 100%;
+            height: auto;
+        }
+
+        .prt4_card{
+            max-width: 75.0055rem;
+            
+            border-radius: 0.56994rem;
+            width: 100%;
+            height: 10rem;
+            
+            
+            
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+
+            transition: height 0.3s ease;
+        }
+
+        .prt4_card.N1{
+            background: #03B585;
+            
+        }
+        .prt4_card.N2{
+            background: #E0EDE9;
+        }
+        .prt4_card.N3{
+            background: #044123;
+        }
+        
+
+        .prt4_gradient{
+            width: 8.94825rem;
+            height: 8.94825rem;
+            border-radius: 100%;
+            
+            filter: blur(26.445714950561523px);
+
+            position: absolute; 
+            z-index: 2;
+            top:-50%;
+            left: -5%;
+
+            transition: top 0.3s ease, left 0.3s ease;
+        }
+        .prt4_gradient.N1{
+            background: #044123;
+        }
+        .prt4_gradient.N2{
+            background: #03B585;
+        }
+        .prt4_gradient.N3{
+            background: #FFFFFF;
+        }
+        .prt4_content{
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: .5rem;
+            padding: 1rem;
+            width: 90%;
+            text-align: center;
+            left: 0;
+            right: 0;
+
+
+           position: absolute; 
+           z-index: 3;
+           
+        }
+        .metier_title{
+            
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.53888rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .metier_title.N1{
+            color: #044123;
+        }
+        .metier_title.N2{
+            color: #03B585;
+        }
+        .metier_title.N3{
+            color: #FFFFFF;
+        }
+        .metier_description{
+            color: #044123;
+            text-align: center;
+            font-family: 'GTAmerica-Regular';
+            font-size: 0.98544rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .metier_description.N3{
+            color: #FFFFFF;
+        }
+        .metier_btn{
+            display: none;
+            grid-template-columns: auto auto;
+            grid-gap: .5rem;
+            
+            
+            opacity: 0; /* Initially set opacity to 0 */
+            transition: opacity 0.3s ease; /* Add a transition for the opacity property */
+            
+                        
+
+            
+        }
+        .metiers_btn{
+            position: relative;
+            margin-top: 3%;
+        }
+        .metier_btn_icon{
+            
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            align-items: center;
+            border-radius: 100%;
+            
+            
+        }
+        .metier_btn_icon.N1{
+            border: 1px solid #FFF;
+        }
+        .metier_btn_icon.N2{
+            border: 1px solid #03B585;
+        }
+        .metier_btn_icon.N3{
+            border: 1px solid #03B585;
+        }
+        .metier_btn_text{
+            /* Voir nos offres d’emploi */     
+            
+            font-family: 'GTAmerica-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12.3884px;
+            line-height: 183%;
+            /* identical to box height, or 23px */
+            text-align: center;
+        }
+        .metier_btn_text.N1{
+            color: #FFFFFF;
+        }
+        .metier_btn_text.N2{
+            color: #03B585;
+        }
+        .metier_btn_text.N3{
+            color: #03B585;
+        }
+
+        /* part4 hover */
+        .prt4_card:hover{
+            height: 12rem;
+        }
+        .prt4_card:hover .prt4_gradient{
+            top:70%;
+            
+            left: -5%;
+        }
+        .prt4_card:hover .metier_btn{
+            display: grid;
+            
+            opacity: 1; /* Show the button on hover */
+            
+            
+        }
+
+
+
+
+
+
+        
+
+        /* ------------------------------> PART5 <------------------------------------ */
+
+        .home_prt5{
+            margin-top: 3rem;
+            max-width: 1200px;
+            height: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            text-align: center;
+            
+        }
+
+        .prt5_text{
+            color: #044123;
+            text-align: center;
+            font-family: 'GTAmerica-Regular';
+            font-size: 1.60563rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+/* ------------------------------> PART6 <------------------------------------ */
+        .home_prt6 {
+            margin-top: 2rem;
+            max-width: 75rem;
+            width: 100%; /* Add this to make it responsive */
+            height: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 2rem;
+            text-align: center;
+        }
+
+        .prt6_title {
+            color: #044123;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: relative;
+        }
+
+        .prt6_cards_container {
+            display: grid;
+            max-width: 75rem;
+            height: auto;
+            width: 100%; 
+           
+            grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+            grid-gap: 2.5rem;
+            overflow: hidden;
+        }
+
+        .prt6_card {
+            width: 22.59481rem; /* Change this to make it responsive */
+            
+            height: 27.3rem; /* Change to auto to maintain aspect ratio */
+            border-radius: 0.9375rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prt6_card_bcg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .prt6_card:hover .prt6_card_bcg {
+            transform: scale(1.1);
+        }
+
+        .prt6_card_bcg.N1 {
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/3raisons-for-joun-us-picN1-1696417927740.png");
+        }
+
+        .prt6_card_bcg.N2 {
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/dlsksldk-1697472408964.png");
+        }
+
+        .prt6_card_bcg.N3 {
+            background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/Rectangle93-1696346788411.jpg");
+        }
+
+        .prt6_card_gradient {
+            width: 100%;
+            height: 100%;
+            background: rgb(3, 181, 133);
+            background: linear-gradient(0deg, rgba(3, 181, 133, 1) 20%, rgba(3, 181, 133, 0) 50%);
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        .prt6_card_content {
+            color: #fff;
+            text-align: center;
+            font-family: 'GTAmerica-Medium';
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.75rem;
+            padding: 1rem;
+            margin-top: 90%;
+            position: absolute;
+            z-index: 3;
+            top: 0;
+        }
+
+        /* Media Query for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .prt6_card {
+                max-width: 100%; /* Adjust for smaller screens */
+            }
+        }
+
+
+/* ------------------------------> PART7 <------------------------------------ */
+
+        .home_prt7{
+            margin-top: 3rem;
+            max-width: 75rem;
+            
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: .05fr .9fr .05fr;
+            grid-gap: .5rem;
+        }
+        .prt7_testemonials_container{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 1rem;
+            position: relative;
+            height: auto;
+            overflow: hidden;
+        }
+        .test_images{
+            width: 30.28113rem;
+            height: 35rem;
+            position: relative;
+            display: flex;
+            justify-content: space-between; /* Distribute child divs evenly along the horizontal axis */
+            align-items: baseline;
+            justify-items: baseline;
+            transition: opacity 0.2s ease-in-out;
+            overflow: hidden;
+            
+            
+            
+        }
+        .test_bcg{
+            width: 30.28113rem;
+            height: 20.44269rem;
+            border-radius: .5rem;
+            background: #D9D9D9;
+            position: relative;
+            z-index: 1;
+            top: 21%;
+            
+            
+
+            
+        }
+
+        .test_imag{
+            width: 100%;
+            height: 35rem;
+            background-size: cover; /* Scale the background image to cover the container */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            
+
+            
+        }
+        .test_content{
+            display: grid;
+            height: 20.44269rem;
+            grid-template-rows: .8fr .2fr;
+            grid-gap: 1rem;
+            text-align: left;
+            position: relative;
+            top: 21%;
+            transition: opacity 0.2s ease;
+            
+        }
+        .test_text{
+            color: #044123;
+            
+            font-family: 'GTAmerica-Regular';
+            font-size: 1.45rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            height: 15.5rem;
+        }
+        .test_nomination{
+            color: #044123;
+            text-align: justify;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.47281rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-left: 0;
+        }
+
+/* -------------------------> Responsitivity <---------------------------------- */
+        
+        /* Media query for screens with a width between 1000 and 1200 pixels */
+        @media (min-width: 1000px) and (max-width: 1200px) {
+          .banner_line{
+            left: 3%;
+          }
+          .baner_content{
+            left: 8%;
+          }
+          .prt4_card.N3:hover{
+            height: 13rem;
+            }
+            .test_text{
+                font-size: 1.35rem;
+            }
+            .prt5_text{
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+        }
+
+        /* Media query for screens with a width between 1000 and 800 pixels */
+        @media (max-width: 1000px) {
+            .home_banner{
+                height: 32rem;
+            }
+          .banner_line{
+            display: none;
+          }
+          .baner_content{
+            left: 5%;
+          }
+          .banner_title{
+            max-width: 40rem;
+            font-size: 6rem;
+            margin-right: 50%;
+          }
+          .banner_text{
+            max-width: 45rem;
+          }
+          .prt4_card.N3{
+            height: 11rem;
+          }
+          .prt4_card.N3:hover{
+            height: 14rem;
+            }
+            .prt4_card:hover{
+            height: 13rem;
+            }
+
+            .prt5_text{
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+            .test_text{
+                font-size: 1.35rem;
+                
+            }
+
+            .prt7_testemonials_container{
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+            .test_content{
+                max-height: auto;
+                top: 0;
+            }
+            .test_text{
+                height: auto;
+            }
+        }
+
+
+
+        /* Media query for screens less than 700 pixels */
+        @media (max-width: 700px) {
+          .banner_line{
+            display: none;
+          }
+          .baner_content{
+            left: 5%;
+          }
+          .banner_title{
+            max-width: 40rem;
+            font-size: 5rem;
+            margin-right: 50%;
+          }
+          .banner_text{
+            max-width: auto;
+            margin-right: 3%;
+          }
+          .prt4_card.N3{
+            height: 11.75rem;
+          }
+          .prt4_card{
+            height: 10.75rem;
+          }
+          .prt4_card.N3:hover{
+            height: 14.5rem;
+            }
+            .prt4_card:hover{
+            height: 13rem;
+            }
+
+            .prt5_text{
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+            .test_text{
+                font-size: 1.35rem;
+                
+            }
+            .home_prt7{
+                max-height: auto;
+            }
+            .prt7_testemonials_container{
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+            .test_content{
+                max-height: auto;
+                top: 0;
+            }
+            .test_text{
+                height: auto;
+            }
+
+            .prt4_gradient{
+                left: -10%;
+            }
+            .prt4_card:hover .prt4_gradient{
+                left: -10%;
+            }
+        }
+
+        /* Media query for screens less than 600 pixels */
+        @media (max-width: 600px) {
+
+
+            .banner_title{
+            max-width: auto;
+            font-size: 4.3rem;
+            margin-right: 50%;
+          }
+            .prt4_card.N3{
+            height: 13.75rem;
+          }
+          .prt4_card{
+            height: 11.5rem;
+          }
+          .prt4_card.N3:hover{
+            height: 16.5rem;
+            }
+            .prt4_card:hover{
+            height: 14rem;
+            }
+
+            .test_images{
+                width: auto;
+            }
+            .test_content{
+                height: auto;
+                top: 0;
+            }
+            
+
+
+
+        }
+
+
+        /* Media query for screens less than 500 pixels */
+        @media (max-width: 500px) {
+            .home_banner{
+                height: 25rem;
+            }
+            .baner_content{
+                top: 0%;
+                bottom: 0%;
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+            .banner_title{
+            max-width: auto;
+            font-size: 3rem;
+            margin-right: 50%;
+            }
+            .banner_text{
+            max-width: auto;
+            margin-right: 3%;
+            font-size: 1.2rem;
+            }
+
+            .prt2_title{
+                font-size: 2rem;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .prt2_text{
+                font-size: 1.2rem;
+            }
+            .prt4_title{
+                font-size: 2rem;
+            }
+            .prt4_card.N3{
+                height: 17.75rem;
+            }
+            .prt4_card.N2{
+                height: 17rem;
+            }
+            .prt4_card{
+                height: 14.5rem;
+            }
+            .prt4_card.N3:hover{
+                height: 19.5rem;
+            }
+            .prt4_card.N2:hover{
+                height: 19rem;
+            }
+            .prt4_card:hover{
+                height: 16rem;
+            }
+            .prt5_text{
+                font-size:1.2rem ;
+            }
+            .prt6_title{
+                font-size: 2rem;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .test_imag{
+                left: -10%;
+            }
+            .ph-page {
+            margin-top: 100px;
+        }
+
+
+        }
+
+        /* Media query for screens less than 400 pixels */
+
+        @media (max-width: 400px){
+
+
+        }
+
+
+
+
+
+
+    </style>
+
+    <!-- ---------------------------------------- banner -------------------------------------------- --> 
+
+    <div class="home_banner">
+        <div class="banner_bcg">
+
+        </div>
+        <div class="banner_gradient">
+
+        </div>
+        <div class="banner_line">
+            <svg width="1471" height="798" viewBox="0 0 1471 798" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 798L1 127.5C1 74 29.9 1 127.5 1C225.1 1 1093.5 1 1471 1" stroke="white"/>
+                </svg>
+                
+        </div>
+        <div class="baner_content">
+            <div class="banner_title">
+                <p>Futur Prometteur</p>
+            </div>
+            <div class="banner_text">
+                <p>Nous œuvrons à assurer un service client irréprochable, un cheminement de carrière stimulant et un avenir meilleur pour tous.</p>
+            </div>
+            <a class="btn_info N1" href="https://www.cnexia.com/jointalentcommunity?applyType=JTC"><div class="banner_btn white">
+                <div class="banner_btn_text white"><p>Rejoignez-nous</p></div>
+                <div class="banner_btn_arrow">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="btn_arrow white" d="M1.93169 15.8568L7.15663 9.76105C7.53418 9.32057 7.53418 8.67059 7.15663 8.23011L1.93169 2.13435" stroke="#03B585" stroke-width="2.35242" stroke-linecap="round"/>
+                        </svg>
+                        
+                </div>
+            </div></a>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://medameur-devlopper.github.io/Banner_script.js"></script>
+
+<!-- ---------------------------------------- second part -------------------------------------------- --> 
+
+    <div class="home_prt2">
+        <div class="prt2_title">
+            <p>Des experts engagés pour un avenir prometteur</p>
+        </div>
+        <div class="prt2_text">
+            La famille Cnexia compte plus de 2200 talents, tous experts dans leurs différents domaines d’activité notamment : le service client, la technologie d’information et les fonctions support.
+        </div>
+    </div>
+
+    <!-- ---------------------------------------- third part -------------------------------------------- --> 
+
+    <div class="home_prt3">
+
+        <div class="prt3_card">
+            <div class="card_icon N1">
+                <svg width="241" height="240" viewBox="0 0 241 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                </svg>
+            </div>
+            <div class="card_nbr" id="number1" data-end-value="2200">
+                1000
+            </div>
+            <div class="cart_txt">
+                <p>Collaborateurs </p>
+            </div>
+        </div>
+
+        <div class="prt3_card">
+            <div class="card_icon N2">
+                <svg width="241" height="240" viewBox="0 0 241 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                </svg>
+                    
+            </div>
+            <div class="card_nbr" id="number2" data-end-value="40">
+                1000
+            </div>
+            <div class="cart_txt">
+                <p>Activités </p>
+            </div>
+        </div>
+
+        <div class="prt3_card">
+            <div class="card_icon N3">
+                <svg width="241" height="240" viewBox="0 0 241 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.951416" width="239.806" height="239.806" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1003_150" transform="scale(0.000853242)"/>
+                    </pattern>
+                    </defs>
+                    </svg>
+                    
+                    
+            </div>
+            <div class="card_nbr" id="number3" data-end-value="80">
+                1000
+            </div>
+            <div class="cart_txt">
+                <p>Fonctions support</p>
+            </div>
+        </div>
+
+        <div class="prt3_card">
+            <div class="card_icon N4">
+                <svg width="241" height="240" viewBox="0 0 241 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                </svg>
+                    
+                    
+            </div>
+            <div class="card_nbr" id="number4" data-end-value="2">
+                0
+            </div>
+            <div class="cart_txt">
+                <p>Sites</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://medameur-devlopper.github.io/third_part_script.js"></script>
+
+
+
+     <!-- ---------------------------------------- forth part -------------------------------------------- -->
+     
+     <div class="home_prt4">
+        <div class="prt4_title">
+            <p>Nos métiers</p>
+        </div>
+
+        <div class="prt4_cards_container">
+
+            <div class="prt4_card N1">
+                
+                <div class="prt4_gradient N1">
+                    
+                </div>
+                <div class="prt4_content">
+                    <div class="metier_title N1">
+                        <p>Service client</p>
+                    </div> 
+                    <div class="metier_description">
+                        <p>Nos équipes opérationnelles, passionnées et polyvalentes, gèrent au quotidien plus de 40 activités diversifiées.
+                            Elles se consacrent à l'excellence du service client en alliant support technique, fidélisation, programmes de loyauté et ventes, offrant ainsi un large éventail d'opportunités de carrière.
+                           </p>
+                    </div>  
+                    <a href="https://www.cnexia.com/search-results" class="metiers_btn"><div class="metier_btn">
+                        <div class="metier_btn_text N1">
+                            <p>Voir nos offres d'emploi</p>
+                        </div>
+                        <div class="metier_btn_icon N1">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.2974 6.98853L8.47364 4.81228C8.8443 4.44163 8.8443 3.84067 8.47364 3.47002L6.2974 1.29378" stroke="#044123" stroke-width="1.42369" stroke-linecap="round"/>
+                                <path d="M8.19563 4.14111L1.55176 4.14111" stroke="#044123" stroke-width="1.42369" stroke-linecap="round"/>
+                                </svg>
+                                                          
+                        </div>
+                    </div> </a>
+                </div>
+                
+            </div>
+
+
+
+            <div class="prt4_card N2">
+                
+                <div class="prt4_gradient N2">
+                    
+                </div>
+                <div class="prt4_content">
+                    <div class="metier_title N2">
+                        <p>Technologie de l'information</p>
+                    </div> 
+                    <div class="metier_description">
+                        <p>Nos experts en technologie, les "warriors de la tech", s'occupent de la conception et du développement des solutions à la fine pointe de la technologie, agissant notamment sur la cybersécurité, l'ingénierie des réseaux et des systèmes, le développement d'applications web et mobiles, la science des données et l'intelligence artificielle.</p>
+                    </div>  
+                    <a href="https://www.cnexia.com/search-results" class="metiers_btn"><div class="metier_btn">
+                        <div class="metier_btn_text N2">
+                            <p>Voir nos offres d'emploi</p>
+                        </div>
+                        <div class="metier_btn_icon N2">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.2974 6.98853L8.47364 4.81228C8.8443 4.44163 8.8443 3.84067 8.47364 3.47002L6.2974 1.29378" stroke="#044123" stroke-width="1.42369" stroke-linecap="round"/>
+                                <path d="M8.19563 4.14111L1.55176 4.14111" stroke="#044123" stroke-width="1.42369" stroke-linecap="round"/>
+                                </svg>
+                                                          
+                        </div>
+                    </div> </a>
+                </div>
+                
+            </div>
+
+
+
+            <div class="prt4_card N3">
+                
+                <div class="prt4_gradient N3">
+                    
+                </div>
+                <div class="prt4_content">
+                    <div class="metier_title N3">
+                        <p>Fonctions support</p>
+                    </div> 
+                    <div class="metier_description N3">
+                        <p>Les équipes des fonctions support sont les magiciens des coulisses, opérant au sein de différents départements tels que les People & Culture, les
+                            finances, les achats, la communication, la formation, et bien d'autres.
+                            Quel que soit votre domaine d'expertise, que vous soyez un expert en finance, un excellent communicateur ou que vous ayez une passion pour les ressources humaines, nous avons une opportunité pour vous.</p>
+                    </div>  
+                    <a href="https://www.cnexia.com/search-results" class="metiers_btn"><div class="metier_btn ">
+                        <div class="metier_btn_text N3">
+                            <p>Voir nos offres d'emploi</p>
+                        </div>
+                        <div class="metier_btn_icon N3">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.2974 6.98853L8.47364 4.81228C8.8443 4.44163 8.8443 3.84067 8.47364 3.47002L6.2974 1.29378" stroke="#FFFFFF" stroke-width="1.42369" stroke-linecap="round"/>
+                                <path d="M8.19563 4.14111L1.55176 4.14111" stroke="#FFFFFF" stroke-width="1.42369" stroke-linecap="round"/>
+                                </svg>
+                                                          
+                        </div>
+                    </div> </a>
+                </div>
+                
+            </div>
+
+
+            
+
+
+            
+        </div>
+     </div>
+
+<!-- ---------------------------------------- fifth part -------------------------------------------- -->
+
+     <div class="home_prt5">
+
+        <div class="prt5_text">
+            <p>
+                Rejoignez Cnexia et contribuez à révolutionner la façon dont les Canadiens communiquent. <br>
+                Vous découvrirez constamment de nouveaux projets pour susciter votre intérêt et vous stimuler.
+            </p>
+        </div>
+        <a href="https://www.cnexia.com/jointalentcommunity?applyType=JTC" class="btn_info N2"> <div class="banner_btn Green">
+            <div class="banner_btn_text Green"><p>Rejoignez-nous</p></div>
+            <div class="banner_btn_arrow ">
+                <svg class="Green" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="btn_arrow green" d="M1.93169 15.8568L7.15663 9.76105C7.53418 9.32057 7.53418 8.67059 7.15663 8.23011L1.93169 2.13435" stroke="#FFFFFF" stroke-width="2.35242" stroke-linecap="round"/>
+                </svg>
+                    
+            </div>
+        </div>
+        </a>
+     </div>
+
+
+<!-- ---------------------------------------- six part -------------------------------------------- -->
+
+     <div class="home_prt6">
+        <div class="prt6_title">
+            <p>3 raisons pour nous rejoindre</p>
+        </div>
+        <div class="prt6_cards_container">
+            <div class="prt6_card">
+                <div class="prt6_card_bcg N1"></div>
+                <div class="prt6_card_gradient"></div>
+                <div class="prt6_card_content">
+                    <p>
+                        Un environnement innovant avec une ambiance dynamique
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="prt6_card">
+                <div class="prt6_card_bcg N2"></div>
+                <div class="prt6_card_gradient"></div>
+                <div class="prt6_card_content">
+                    <p>
+                        Une équipe passionnée, jeune et ambitieuse
+                    </p>
+                </div>
+            </div>
+
+            <div class="prt6_card">
+                <div class="prt6_card_bcg N3"></div>
+                <div class="prt6_card_gradient"></div>
+                <div class="prt6_card_content">
+                    <p>
+                        De nombreuses opportunités et un parcours de carrière évolutif                    </p>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+<!-- ---------------------------------------- 7th  part -------------------------------------------- -->
+     <div class="home_prt7">
+        <div class="prt7_nav left">
+            <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 2L2.80621 9.9931C1.77938 11.134 1.77938 12.866 2.8062 14.0069L10 22" stroke="#03B585" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div class="prt7_testemonials_container">
+
+            <div class="test_images">
+                <div class="test_bcg">
+
+                </div>
+                <div class="test_imag">
+
+                </div>
+            </div>
+            <div class="test_content">
+                <div class="test_text">
+                    <p>
+                        En 2019, j’ai eu l’opportunité d'intégrer Cnexia en tant que responsable de formation avec une mission extrêmement challengeante, celle de bâtir une équipe de formation passionnée et capable de soutenir la croissance de notre société. 
+                    </p>
+                </div>
+                <div class="test_nomination">
+                    <p>
+                        <span>Achraf Tommis</span><br>
+                        <span style="color: #03B585; font-weight: 400">Learning Manager </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="prt7_nav right">
+            <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22L9.19379 14.0069C10.2206 12.866 10.2206 11.134 9.1938 9.99311L2 2" stroke="#03B585" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                
+        </div>
+     </div>
+
+     <script type="text/javascript" src="https://medameur-devlopper.github.io/Home_testemonials_script.js"></script>
+
+
+     
+
+   
+    
+</body>
+</html>

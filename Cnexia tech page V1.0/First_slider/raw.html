@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Slider</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    transition: opacity 0.5s ease-in-out;
+    text-align: left;
+  }
+  .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    height: 100%;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .slide.active {
+    opacity: 1;
+  }
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .dot.active {
+    background-color: blue;
+  }
+</style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide active">Slide1sdsfjdfkdfjdk /n /t kfjkjkjkjd</div>
+      <div class="slide">Slide 2</div>
+      <div class="slide">Slide 3</div>
+    </div>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideWidth = slides.clientWidth;
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * slideWidth}px)`;
+      slides.querySelectorAll('.slide').forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === index);
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % dots.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000);
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        currentSlide = idx;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Initial setup
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

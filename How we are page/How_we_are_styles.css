@@ -1,0 +1,580 @@
+/* ------------------- Globale Iputes ---------------- */
+p{
+    margin: 0;
+
+}
+
+*{
+    padding: 0;
+    margin: auto;
+    max-width: 1920px;
+    
+}
+.inner-container.ph-fluid-container, .container.ph-fluid-container {
+
+    padding-top: 0;
+}
+
+        
+a:link {
+text-decoration: none;
+}
+
+a:visited {
+text-decoration: none;
+}
+.ph-page {
+    margin-top: 100px;
+}
+
+
+
+
+/* ------------------- How we are banner ---------------- */
+.hwa_banner{
+    max-width: 99rem;
+    max-height: 34rem;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+   
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-top: .7rem; 
+
+    perspective: 1000px;
+    transition: transform 0.5s ease;
+}
+.banner_bcg{
+
+    background: #0BAA7A;
+    position: relative;
+    width: 100%;
+    height: 34rem;
+    z-index: 1;
+}
+.banner_svg{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+.banner_gradient{
+    background: linear-gradient(110deg, rgba(3, 181, 145, 0.00) 0.75%, #03B585 24.11%, #04B68B 74.85%, rgba(4, 182, 134, 0.00) 102.63%);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 34rem;
+}
+.banner_content{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    width: 100%;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+}
+.hero{
+    margin: 0;
+    position: absolute;
+    left: 94%;
+    top: 6%;
+    
+}
+.text_right{
+    color: #FFF;
+    font-family: GT America;
+    font-size: 3.40rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    margin: 0;
+    left: 65%;
+    top: 55%;
+}
+.text_left{
+    color: #FFF;
+    font-family: GT America;
+    font-size: 3.83rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    position: absolute;
+    margin: 0;
+    left: 10%;
+    top: 25%;
+}
+.banner_img{
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/heroimage-1698105476156.png");
+    position: absolute;
+    z-index: 5;
+    width: 30rem;
+    
+    height: 34rem;
+    top: 0;
+    left: 35%;
+    background-size: cover; /* Scale the background image to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+
+}
+
+
+/* the paralex effect just added */
+
+.hwa_banner:hover {
+    transform: perspective(1000px) rotateX(3deg); /* Adjust the rotation values for the 3D effect */
+}
+
+.banner_bcg,
+.banner_svg,
+.banner_gradient,
+.banner_content,
+.text_right,
+.text_left,
+.banner_img {
+    transform-style: preserve-3d; /* Maintain 3D perspective on child elements */
+    transform: translateZ(1px); /* Add a minimal depth to child elements */
+}
+
+/* ------------------- en savoire pls sur cnexia ---------------- */
+
+.part2 {
+    margin-top: 3rem;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    grid-gap: 2rem;
+    text-align: left ; /* Align the title to the left */
+}
+
+.prt2_title {
+    color: #044123;
+    text-align: left ; /* Align the title to the left */
+    font-family: Montserrat;
+    font-size: 2.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+}
+
+.prt2_content {
+    color: #044123;
+    text-align: justify;
+    font-family: GT America;
+    font-size: 1.60563rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 100%;
+}
+
+/* ------------------- mot du president ---------------- */
+
+.part3{
+    margin-top: 3rem;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    grid-gap: 2rem;
+}
+
+.prt3_left{
+    max-width: 22.39894rem;
+    height: 26.27244rem;
+    width: 100%;
+    border-radius: .5rem;
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/nawfalspic-1698144571339.png");
+    background-size: cover; /* Scale the background image to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+}
+
+.prt3_right{
+    display: grid;
+    grid-template-rows: auto;
+    
+    height: 100%;
+}
+.prt3_title{
+    color: #044123;
+    font-family: Montserrat;
+    font-size: 3.36825rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    width: 100%;
+    margin-top: 2rem;
+}
+.prt3_content{
+    color: #044123;
+    text-align: justify;
+    font-family: GT America;
+    font-size: 1.628rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+}
+.prt3_signature{
+    color: #044123;
+    font-family: GT America;
+    font-size: 1.628rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    text-align: right;
+}
+
+/* ------------------- part 4 ---------------- */
+
+.part4{
+    margin-top: 10rem;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 4rem;
+}
+.prt4_left{
+    height: 100%;
+    display: grid;
+    grid-template-rows:auto ;
+    grid-gap: 1rem;
+
+}
+.prt4_title{
+    color: #044123;
+    font-family: Montserrat;
+    font-size: 2.93063rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.prt4_content{
+    color: #044123;
+    text-align: justify;
+    font-family: GT America;
+    font-size: 1.628rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.prt4_right{
+    width: 100%;
+    height: 19.1875rem;
+    width: 31.375rem;
+    background-size: cover; /* Scale the background image to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/Libe%CC%81rezvotrepotentielchezCnexiapic-1698144569586.png");
+    
+}
+
+/* ------------------- the 3parts container ---------------- */
+/* .last3_parts_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+} */
+/* ------------------- Nos valeurs ---------------- */
+.part5{
+    margin-top: 5rem;
+    max-width: 66.8125rem;
+    max-height: 92.125rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 5rem;
+    
+   
+}
+
+.prt5_title{
+    color: #044123;
+    font-family: Montserrat;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    text-align: center;
+}
+.prt5_main{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    position: relative;
+    
+    grid-gap: 4rem;
+    
+}
+.prt5_layer1{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    margin-top: 5rem;
+}
+.prt5_content_holder{
+    width: 100%;
+    display: flex;
+}
+.content_holder{
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    width:  23.125rem;
+    height: auto;
+    margin: 0;
+}
+
+.prt5_content_holder.N1{
+    justify-content: flex-start;
+}
+.prt5_content_holder.N2{
+    justify-content: flex-end;
+}
+.prt5_content_holder.N3{
+    justify-content: flex-start;
+}
+
+.prt5_content_holder.N4{
+    justify-content: flex-end;
+}
+
+.prt5_content_holder.N5{
+    justify-content: flex-start;
+}
+
+
+
+.prt5_content_title{
+    color: #044123;
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    text-align: left;
+}
+
+.prt5_content{
+        color: #044123;
+    font-family: GT America;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.prt5_layer2{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 4rem;
+}
+
+.prt5_layer3{
+    position: absolute;
+    z-index: 3;
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#moving-svg {
+    transition: transform 0.5s ease; /* Adjust the transition duration as needed */
+}
+
+.prt5_layer4{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.prt5_icon.N1{
+    margin-top: 100px;
+}
+.prt5_icon.N2{
+    margin-top: 160px;
+}
+.prt5_icon.N3{
+    margin-top: 140px;
+}
+.prt5_icon.N4{
+    margin-top: 117px;
+}
+.prt5_icon.N5{
+    margin-top: 130px;
+}
+
+
+
+/* ------------------- 6th part ---------------- */
+
+.part6{
+    max-width: 66.8125rem;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    
+    margin-top: 18rem;
+    grid-gap: 1rem;
+}
+.prt6_title{
+    color: #044123;
+    text-align: center;
+    font-family: GT America;
+    font-size: 2.1875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.prt6_content{
+    color: #044123;
+    text-align: center;
+    font-family: GT America;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.prt6_btn{
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 1rem;
+}
+a.banner_btn {
+    text-align: left; /* Align the content to the left */
+    display: block; /* Make the link a block element */
+}
+
+.banner_btn {
+    width: 10.62rem;
+    height: 2.6rem;
+    border-radius: 4.77838rem;
+    padding: 0.51456rem 0.95569rem 0.51456rem 1.02919rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: .5rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, stroke 0.3s ease;
+}
+.banner_btn.Green{
+    background: #03B585;
+    color: #FFF;
+    margin: auto;
+}
+
+/* Hovring on the btn  */
+        
+.btn_info:hover
+.banner_btn.Green{
+    background-color:#f6f6f6;
+    box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+    -webkit-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+    -moz-box-shadow: 6px 9px 80px -33px rgba(0,0,0,0.62);
+}
+.btn_info:hover
+.banner_btn_text.Green {
+    color:#03B585;
+}
+
+.btn_info:hover
+.btn_arrow.green{
+    stroke:#03B585;
+}
+
+/* ------------------- 7th part ---------------- */
+
+
+.part7{
+    max-width: 74.75rem;
+    height: 36.40938rem;
+    width: 100%;
+    
+    margin-top: 5rem;
+    overflow: hidden;
+    border-radius: 4rem;
+    position: relative;
+    display: block;
+}
+.prt7_layer1{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: url("https://assets.phenompeople.com/CareerConnectResources/prod/CNEXEMEA/images/fsdsdfsvxcvzsg-16502948787961-1698658708676.jpg");
+    background-size: cover; /* Scale the background image to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center;
+}
+
+.prt7_layer2{
+    background: linear-gradient(180deg, rgba(0, 150, 108, 0.00) 0%, rgba(0, 150, 108, 0.00) 67.19%, #03B585 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.prt7_layer3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+}
+.prt7_nav_btn_left {
+    margin: auto auto auto 1rem;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.prt7_nav_btn_right {
+    margin: auto 1rem auto auto;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.prt7_nav_btn_left:hover #prt7_nav_left {
+    stroke-width: 5;
+    transform: scale(1.2);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.prt7_nav_btn_right:hover #prt7_nav_right {
+    stroke-width: 5;
+    transform: scale(1.2);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
